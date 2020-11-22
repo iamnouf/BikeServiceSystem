@@ -5,6 +5,9 @@
  */
 package bikeservicesystem;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author NEW
@@ -37,6 +40,7 @@ public class NewPassword extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,10 +54,26 @@ public class NewPassword extends javax.swing.JFrame {
         jLabel4.setText("* Contain at least one symbol character");
 
         jPasswordField1.setForeground(new java.awt.Color(204, 204, 204));
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("***************");
+        jPasswordField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPasswordField1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jPasswordField1FocusLost(evt);
+            }
+        });
 
         jPasswordField2.setForeground(new java.awt.Color(204, 204, 204));
-        jPasswordField2.setText("jPasswordField2");
+        jPasswordField2.setText("***************");
+        jPasswordField2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPasswordField2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jPasswordField2FocusLost(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("New Password");
@@ -71,6 +91,18 @@ public class NewPassword extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jButton2.setText("Cancel");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("<");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,7 +123,9 @@ public class NewPassword extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                        .addContainerGap()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
@@ -110,8 +144,10 @@ public class NewPassword extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
@@ -129,7 +165,7 @@ public class NewPassword extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,7 +173,77 @@ public class NewPassword extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+             String NewPassword = jPasswordField1.getText();
+        String ConfirmPassword =jPasswordField2.getText();
+
+        String upperCase = "(.*[A-Z].*)";
+        String numbers = "(.*[0-9].*)";
+        String specialChars = "(.*[ ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*)";
+        String space = "(.*[   ].*)";
+        if (!NewPassword.isEmpty() && !ConfirmPassword.isEmpty() && NewPassword.matches(upperCase) && NewPassword.matches(numbers) && NewPassword.matches(specialChars) && !NewPassword.matches(space) && NewPassword.length() > 8 && ConfirmPassword.equals(NewPassword)) {
+
+               Login next = new Login ();
+               next.setVisible(true);
+        } 
+        else {
+                    JOptionPane.showMessageDialog(null, "Invalid Password Detalis !" );  
+
+            
+            jPasswordField1.setText(null);
+            jPasswordField2.setText(null);
+
+            
+        }
+    
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+          ValidationCode back = new ValidationCode ();
+          back.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+          Login back = new Login ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jPasswordField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField1FocusGained
+        // TODO add your handling code here:
+           if(jPasswordField1.getText().equals("***************"))
+        {
+            jPasswordField1.setText("");
+            jPasswordField1.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_jPasswordField1FocusGained
+
+    private void jPasswordField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField1FocusLost
+        // TODO add your handling code here:
+           if(jPasswordField1.getText().equals(""))
+        {
+            jPasswordField1.setText("***************");
+            jPasswordField1.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_jPasswordField1FocusLost
+
+    private void jPasswordField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField2FocusGained
+        // TODO add your handling code here:
+            if(jPasswordField2.getText().equals("***************"))
+        {
+            jPasswordField2.setText("");
+            jPasswordField2.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_jPasswordField2FocusGained
+
+    private void jPasswordField2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField2FocusLost
+        // TODO add your handling code here:
+           if(jPasswordField2.getText().equals(""))
+        {
+            jPasswordField2.setText("***************");
+            jPasswordField2.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_jPasswordField2FocusLost
 
     /**
      * @param args the command line arguments
@@ -177,6 +283,7 @@ public class NewPassword extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
