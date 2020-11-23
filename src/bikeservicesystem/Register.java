@@ -266,7 +266,7 @@ public class Register extends javax.swing.JFrame {
                                         .addComponent(jLabel14)
                                         .addComponent(PhoneNumber))))
                             .addGap(24, 24, 24))))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
