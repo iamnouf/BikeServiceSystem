@@ -5,6 +5,8 @@
  */
 package bikeservicesystem;
 
+import static bikeservicesystem.Settings.jTextField3;
+import static bikeservicesystem.Settings.jTextField4;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -490,7 +492,10 @@ public class ViewOrder extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-              ArrayList<String> fileList = new ArrayList<>();
+     
+                
+                ArrayList<String> fileList = new ArrayList<>();
+                ArrayList<String> fileList2 = new ArrayList<>();
 
         try {
             Scanner read = new Scanner(new File("RentInfo.txt"));
@@ -498,42 +503,34 @@ public class ViewOrder extends javax.swing.JFrame {
             //  String line;
             while (read.hasNext()) {
                 String [] line = read.nextLine().split(" ");
-                fileList.add(line[0]);
-                jTextField2.setText(fileList.get(0));
+                fileList2.add(line[0]); 
+              
+           
+           
+
+                jTextField2.setText(fileList2.get(0));
                 jTextField10.setText(RentBike.Date.getText());
                 jTextField19.setText("Process");
                 
-                jTextField1.setText(fileList.get(0));
-                jTextField12.setText(RentBike.Date.getText());
-                jTextField21.setText("Process");
-                
-                jTextField5.setText(fileList.get(0));
-                jTextField14.setText(RentBike.Date.getText());
-                jTextField23.setText("Process");
-                
-                jTextField7.setText(fileList.get(0));
-                jTextField16.setText(RentBike.Date.getText());
-                jTextField25.setText("Process");
+//                jTextField1.setText(fileList2.get(0));
+//                jTextField12.setText(RentBike.Date.getText());
+//                jTextField21.setText("Process");
+//                
                
+               
+           
+                
             //  String line;
                 String [] line2 = sc.nextLine().split(" ");
                 fileList.add(line2[0]);
 
-                jTextField3.setText(fileList.get(0) );
+               jTextField3.setText(fileList.get(0));
                 jTextField11.setText(FixBike.Date.getText());
                 jTextField20.setText("Process");
 
-                jTextField4.setText(fileList.get(0) );
-                jTextField13.setText(FixBike.Date.getText());
-                jTextField22.setText("Process");
-                
-                jTextField6.setText(fileList.get(0) );
-                jTextField15.setText(FixBike.Date.getText());
-                jTextField24.setText("Process");
-                
-                jTextField8.setText(fileList.get(0) );
-                jTextField17.setText(FixBike.Date.getText());
-                jTextField26.setText("Process");
+//                jTextField4.setText(fileList.get(0) );
+//                jTextField13.setText(FixBike.Date.getText());
+//                jTextField22.setText("Process");
             
 
                
@@ -543,6 +540,10 @@ public class ViewOrder extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
+            
+
+               
+      
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**

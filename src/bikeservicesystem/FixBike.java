@@ -23,6 +23,7 @@ import java.util.logging.Logger;
  */
 public class FixBike extends javax.swing.JFrame {
      static Double price;
+static String fix = "Fix_Bike";
 
     /**
      * Creates new form FixBike

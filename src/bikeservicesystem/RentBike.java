@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  */
 public class RentBike extends javax.swing.JFrame {
      static Double price;
-
+static String rent = "Rent_Bike";
     /**
      * Creates new form RentBike
      */
