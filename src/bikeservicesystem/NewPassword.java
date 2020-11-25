@@ -106,7 +106,7 @@ public class NewPassword extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(10, 320, 126, 35);
 
-        jButton1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jButton1.setText("Change");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +116,7 @@ public class NewPassword extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(220, 500, 170, 40);
 
-        jButton2.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

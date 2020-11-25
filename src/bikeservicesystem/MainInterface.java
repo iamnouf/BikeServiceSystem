@@ -88,7 +88,7 @@ public class MainInterface extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(410, 890));
         getContentPane().setLayout(null);
 
-        jButton5.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jButton5.setText("Rent Bike");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +99,7 @@ public class MainInterface extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(80, 320, 249, 95);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jButton1.setText("Fix Bike");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {

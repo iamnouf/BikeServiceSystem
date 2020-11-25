@@ -63,6 +63,7 @@ public class ForgetPassword extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(140, 320, 143, 16);
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton1.setText("Reset my Password");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

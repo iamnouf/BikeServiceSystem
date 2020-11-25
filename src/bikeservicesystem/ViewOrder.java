@@ -353,7 +353,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton12);
         jButton12.setBounds(320, 380, 86, 29);
 
-        jButton8.setFont(new java.awt.Font("Lucida Sans", 0, 18)); // NOI18N
+        jButton8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton8.setText("UPDATE");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

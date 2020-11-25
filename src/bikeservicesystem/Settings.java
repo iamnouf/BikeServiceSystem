@@ -85,7 +85,7 @@ public class Settings extends javax.swing.JFrame {
         jLabel7.setBounds(20, 410, 60, 16);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton2.setText("SHOW INFO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +181,7 @@ public class Settings extends javax.swing.JFrame {
         jButton4.setBounds(0, 730, 120, 71);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 18)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton6.setText("SIGN OUT");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
