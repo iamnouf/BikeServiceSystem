@@ -38,26 +38,39 @@ public class Payment extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(333, 592));
+        setPreferredSize(new java.awt.Dimension(414, 896));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel1.setText("Payment Information");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(109, 23, 182, 25);
 
         jLabel2.setText("Total Price is :");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(19, 132, 89, 16);
 
         jLabel3.setText("SR");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(181, 132, 34, 16);
 
         jLabel4.setFont(new java.awt.Font("Ebrima", 0, 14)); // NOI18N
         jLabel4.setText("Please Enter Credit Card Information");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(40, 170, 261, 25);
 
         jTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("Name On Card");
@@ -69,6 +82,8 @@ public class Payment extends javax.swing.JFrame {
                 jTextField1FocusLost(evt);
             }
         });
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(40, 310, 137, 35);
 
         jTextField2.setForeground(new java.awt.Color(204, 204, 204));
         jTextField2.setText("4847 **** **** ****");
@@ -85,6 +100,8 @@ public class Payment extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(40, 240, 137, 35);
 
         jFormattedTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jFormattedTextField1.setText("MM/YY");
@@ -101,6 +118,8 @@ public class Payment extends javax.swing.JFrame {
                 jFormattedTextField1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jFormattedTextField1);
+        jFormattedTextField1.setBounds(200, 240, 101, 35);
 
         jFormattedTextField2.setForeground(new java.awt.Color(204, 204, 204));
         jFormattedTextField2.setText("3-4 digit code");
@@ -117,109 +136,88 @@ public class Payment extends javax.swing.JFrame {
                 jFormattedTextField2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jFormattedTextField2);
+        jFormattedTextField2.setBounds(200, 310, 101, 35);
 
-        jLabel5.setText("Card number");
-
-        jLabel6.setText("Name on Card");
-
-        jLabel7.setText("Expires date ");
-
-        jLabel8.setText("CVV Number");
-
-        jButton1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 18)); // NOI18N
         jButton1.setText("NEXT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(270, 520, 107, 52);
 
-        jButton2.setText("<");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setText("Card number");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(40, 210, 81, 16);
+
+        jLabel6.setText("Name on Card");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(40, 290, 89, 14);
+
+        jLabel7.setText("Expires date ");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(200, 210, 81, 16);
+
+        jLabel8.setText("CVV Number");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(200, 290, 79, 16);
+
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(204, 204, 204));
+        jButton3.setText("<");
+        jButton3.setBorder(null);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(0, 0, 80, 90);
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Settings");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(290, 730, 120, 71);
+
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Orders");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(120, 730, 170, 71);
+
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Home");
+        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6);
+        jButton6.setBounds(0, 730, 120, 71);
 
         jTextField3.setEditable(false);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(114, 127, 61, 26);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jFormattedTextField2)
-                                    .addComponent(jFormattedTextField1)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(-10, 0, 410, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -235,35 +233,6 @@ public class Payment extends javax.swing.JFrame {
     private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Thanku next = new Thanku();
-        next.setVisible(true);
-        String CarNum = jTextField2.getText();
-        String ExDate = jFormattedTextField1.getText();
-        String NameOnCard = jTextField1.getText();
-        String CVV = jFormattedTextField2.getText();
-
-        String upperCase = "(.*[A-Z].*)";
-        String numbers = "(.*[0-9].*)";
-
-        if (!CarNum.isEmpty() && !ExDate.isEmpty() && !NameOnCard.isEmpty() && !CVV.isEmpty() && CarNum.matches(numbers) && ExDate.matches(numbers) && NameOnCard.matches(upperCase) && !CVV.matches(numbers) && CVV.length() == 4 || CVV.length() == 3) {
-
-            Thanku t = new Thanku();
-            t.setVisible(true);
-
-        } else if (CarNum.isEmpty() || ExDate.isEmpty() || NameOnCard.isEmpty() || CVV.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Invalid Payment Detalis !");
-
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        FixBike back = new FixBike();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
         // TODO add your handling code here:
@@ -329,6 +298,36 @@ public class Payment extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jFormattedTextField2FocusLost
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Thanku next = new Thanku ();
+        next.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Welcome back = new Welcome ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Settings back = new Settings ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        ViewOrder back = new ViewOrder ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        MainInterface back = new MainInterface ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -366,7 +365,10 @@ public class Payment extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
@@ -377,6 +379,7 @@ public class Payment extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

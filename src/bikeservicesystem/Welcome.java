@@ -32,13 +32,14 @@ public class Welcome extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jDialog1 = new javax.swing.JDialog();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
         RegButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
@@ -65,18 +66,28 @@ public class Welcome extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(333, 592));
-
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel1.setText("Welcome to");
+        setPreferredSize(new java.awt.Dimension(414, 896));
+        getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel2.setText("Bike Service System");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(110, 330, 170, 22);
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setText("Welcome to");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(130, 270, 135, 30);
 
         jLabel3.setText(" Choose your bike, get it delivered to your");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 360, 265, 16);
 
         jLabel4.setText(" doorstep, and ride!");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(140, 380, 131, 16);
 
+        LoginButton.setBackground(new java.awt.Color(255, 255, 255));
         LoginButton.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         LoginButton.setText("Login");
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +95,10 @@ public class Welcome extends javax.swing.JFrame {
                 LoginButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(LoginButton);
+        LoginButton.setBounds(130, 430, 145, 59);
 
+        RegButton.setBackground(new java.awt.Color(255, 255, 255));
         RegButton.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         RegButton.setText("Register");
         RegButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,55 +106,14 @@ public class Welcome extends javax.swing.JFrame {
                 RegButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(RegButton);
+        RegButton.setBounds(130, 500, 145, 55);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(90, 310, 211, 10);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(RegButton, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-                            .addComponent(LoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addComponent(jLabel1)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(48, 48, 48)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(34, 34, 34)
-                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RegButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 1.png")); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 420, 900);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +176,7 @@ public class Welcome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JSeparator jSeparator1;
