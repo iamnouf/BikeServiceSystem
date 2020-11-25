@@ -47,6 +47,9 @@ public class Settings extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,23 +78,24 @@ public class Settings extends javax.swing.JFrame {
 
         jLabel6.setText("Date of Birth");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 340, 79, 16);
+        jLabel6.setBounds(20, 370, 79, 16);
 
         jLabel7.setText("Language");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(20, 380, 60, 16);
+        jLabel7.setBounds(20, 410, 60, 16);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 18)); // NOI18N
-        jButton2.setText("SIGN OUT");
+        jButton2.setText("SHOW INFO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(257, 520, 120, 52);
+        jButton2.setBounds(250, 460, 130, 52);
 
+        jTextField1.setEditable(false);
         jTextField1.setForeground(new java.awt.Color(51, 51, 51));
         jTextField1.setText("Name");
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -105,30 +109,38 @@ public class Settings extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(120, 190, 170, 26);
 
+        jTextField2.setEditable(false);
         jTextField2.setForeground(new java.awt.Color(51, 51, 51));
         jTextField2.setText("someone@example.com");
         getContentPane().add(jTextField2);
         jTextField2.setBounds(120, 230, 170, 26);
 
+        jPasswordField1.setEditable(false);
         jPasswordField1.setForeground(new java.awt.Color(51, 51, 51));
         jPasswordField1.setText("************");
         getContentPane().add(jPasswordField1);
         jPasswordField1.setBounds(120, 260, 170, 26);
 
+        jTextField3.setEditable(false);
         jTextField3.setForeground(new java.awt.Color(51, 51, 51));
         jTextField3.setText("05xxxxxxxx");
         getContentPane().add(jTextField3);
         jTextField3.setBounds(120, 300, 170, 26);
 
+        jTextField4.setEditable(false);
         jTextField4.setForeground(new java.awt.Color(51, 51, 51));
         jTextField4.setText("dd/MM/yy");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(120, 330, 170, 26);
+        jTextField4.setBounds(120, 360, 170, 26);
 
-        jComboBox1.setEditable(true);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Arabic" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(120, 370, 170, 26);
+        jComboBox1.setBounds(120, 400, 170, 27);
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel8.setText("Settings");
@@ -168,6 +180,27 @@ public class Settings extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(0, 730, 120, 71);
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 18)); // NOI18N
+        jButton6.setText("SIGN OUT");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6);
+        jButton6.setBounds(250, 520, 130, 52);
+
+        jTextField5.setEditable(false);
+        jTextField5.setForeground(new java.awt.Color(51, 51, 51));
+        jTextField5.setText("Address");
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(120, 330, 170, 26);
+
+        jLabel10.setText("Address");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(20, 340, 53, 16);
+
         jLabel9.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
         getContentPane().add(jLabel9);
         jLabel9.setBounds(0, 0, 414, 890);
@@ -187,8 +220,15 @@ public class Settings extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Welcome next = new Welcome ();
-        next.setVisible(true);
+      
+        jTextField2.setText(Register.emText.getText());
+        jTextField1.setText(Register.Fname.getText() +" "+Register.Lname.getText() );
+        jPasswordField1.setText(Register.password.getText());
+        jTextField5.setText(Register.addressText.getText());
+        jTextField3.setText(Register.PhoneNumber.getText());
+        jTextField4.setText(Register.Date.getText());
+
+     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -208,6 +248,17 @@ public class Settings extends javax.swing.JFrame {
         MainInterface back = new MainInterface ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Welcome back = new Welcome ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,8 +300,10 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -259,10 +312,11 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    public static javax.swing.JPasswordField jPasswordField1;
+    public static javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField2;
+    public static javax.swing.JTextField jTextField3;
+    public static javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

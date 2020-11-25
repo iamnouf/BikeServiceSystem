@@ -7,11 +7,25 @@ package bikeservicesystem;
 
 import java.awt.Color;
 import bikeservicesystem.Welcome;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 /**
  *
  * @author NEW
  */
 public class Register extends javax.swing.JFrame {
+    static ArrayList<String> fileList = new ArrayList<>();
 
     /**
      * Creates new form Register
@@ -39,13 +53,9 @@ public class Register extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         Fname = new javax.swing.JTextField();
         Lname = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        Password = new javax.swing.JPasswordField();
-        boxnum = new javax.swing.JComboBox<>();
+        emText = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
         PhoneNumber = new javax.swing.JTextField();
-        dd = new javax.swing.JComboBox<>();
-        mm = new javax.swing.JComboBox<>();
-        yy = new javax.swing.JComboBox<>();
         Language = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -57,7 +67,10 @@ public class Register extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         RegNext = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        addressText = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
+        Date = new javax.swing.JFormattedTextField();
+        Address = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,11 +104,11 @@ public class Register extends javax.swing.JFrame {
 
         jLabel7.setText("Date of Birth");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 450, 79, 16);
+        jLabel7.setBounds(30, 510, 79, 16);
 
         jLabel8.setText("Language");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 510, 60, 16);
+        jLabel8.setBounds(30, 570, 60, 16);
 
         Fname.setForeground(new java.awt.Color(204, 204, 204));
         Fname.setText("First Name");
@@ -123,44 +136,39 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(Lname);
         Lname.setBounds(170, 220, 130, 26);
 
-        email.setForeground(new java.awt.Color(204, 204, 204));
-        email.setText("someone@example.com");
-        email.addHierarchyListener(new java.awt.event.HierarchyListener() {
+        emText.setForeground(new java.awt.Color(204, 204, 204));
+        emText.setText("someone@example.com");
+        emText.addHierarchyListener(new java.awt.event.HierarchyListener() {
             public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
-                emailHierarchyChanged(evt);
+                emTextHierarchyChanged(evt);
             }
         });
-        email.addFocusListener(new java.awt.event.FocusAdapter() {
+        emText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                emailFocusGained(evt);
+                emTextFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFocusLost(evt);
+                emTextFocusLost(evt);
             }
         });
-        getContentPane().add(email);
-        email.setBounds(30, 280, 180, 26);
+        getContentPane().add(emText);
+        emText.setBounds(30, 280, 240, 26);
 
-        Password.setForeground(new java.awt.Color(204, 204, 204));
-        Password.setText("***************");
-        Password.addFocusListener(new java.awt.event.FocusAdapter() {
+        password.setForeground(new java.awt.Color(204, 204, 204));
+        password.setText("***************");
+        password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                PasswordFocusGained(evt);
+                passwordFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                PasswordFocusLost(evt);
+                passwordFocusLost(evt);
             }
         });
-        getContentPane().add(Password);
-        Password.setBounds(30, 330, 180, 26);
-
-        boxnum.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
-        boxnum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+966", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(boxnum);
-        boxnum.setBounds(30, 400, 79, 27);
+        getContentPane().add(password);
+        password.setBounds(30, 330, 240, 26);
 
         PhoneNumber.setForeground(new java.awt.Color(204, 204, 204));
-        PhoneNumber.setText("5xxxxxxxx");
+        PhoneNumber.setText("05xxxxxxx");
         PhoneNumber.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 PhoneNumberFocusGained(evt);
@@ -170,22 +178,11 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PhoneNumber);
-        PhoneNumber.setBounds(110, 400, 193, 26);
-
-        dd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        getContentPane().add(dd);
-        dd.setBounds(30, 470, 61, 27);
-
-        mm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novmber", "December" }));
-        getContentPane().add(mm);
-        mm.setBounds(100, 470, 101, 27);
-
-        getContentPane().add(yy);
-        yy.setBounds(200, 470, 71, 27);
+        PhoneNumber.setBounds(30, 400, 240, 26);
 
         Language.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Engilsh", "Arabic" }));
         getContentPane().add(Language);
-        Language.setBounds(30, 530, 180, 27);
+        Language.setBounds(30, 590, 180, 27);
 
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("*");
@@ -215,19 +212,19 @@ public class Register extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(255, 0, 0));
         jLabel14.setText("*");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(110, 450, 6, 16);
+        jLabel14.setBounds(110, 510, 6, 16);
 
         jLabel15.setForeground(new java.awt.Color(255, 0, 0));
         jLabel15.setText("*");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(100, 510, 6, 16);
+        jLabel15.setBounds(100, 570, 6, 16);
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel16.setText("Containing nymber,character,and symbol");
+        jLabel16.setText("Containing at least one number,character,and symbol and More than 8 Character");
         jLabel16.setToolTipText("");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(40, 360, 157, 10);
+        jLabel16.setBounds(40, 360, 370, 10);
 
         RegNext.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         RegNext.setText("Register");
@@ -252,10 +249,40 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(0, 0, 80, 90);
 
+        addressText.setForeground(new java.awt.Color(204, 204, 204));
+        addressText.setText("Building number , street name ...etc");
+        addressText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                addressTextFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                addressTextFocusLost(evt);
+            }
+        });
+        getContentPane().add(addressText);
+        addressText.setBounds(30, 460, 240, 26);
+
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel17.setText("Register");
         getContentPane().add(jLabel17);
         jLabel17.setBounds(160, 40, 70, 22);
+
+        Date.setForeground(new java.awt.Color(204, 204, 204));
+        Date.setText("dd/MM/yyyy");
+        Date.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DateFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DateFocusLost(evt);
+            }
+        });
+        getContentPane().add(Date);
+        Date.setBounds(30, 530, 240, 26);
+
+        Address.setText("Address");
+        getContentPane().add(Address);
+        Address.setBounds(30, 440, 51, 16);
 
         jLabel18.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 3.png")); // NOI18N
         getContentPane().add(jLabel18);
@@ -300,49 +327,49 @@ public class Register extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LnameFocusLost
 
-    private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
+    private void emTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emTextFocusGained
         // TODO add your handling code here:
-              if(email.getText().equals("someone@example.com"))
+              if(emText.getText().equals("someone@example.com"))
         {
-            email.setText("");
-            email.setForeground(new Color(0,0,0));
+            emText.setText("");
+            emText.setForeground(new Color(0,0,0));
         }
-    }//GEN-LAST:event_emailFocusGained
+    }//GEN-LAST:event_emTextFocusGained
 
-    private void emailHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_emailHierarchyChanged
+    private void emTextHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_emTextHierarchyChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailHierarchyChanged
+    }//GEN-LAST:event_emTextHierarchyChanged
 
-    private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
+    private void emTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emTextFocusLost
         // TODO add your handling code here:
-              if(email.getText().equals(""))
+              if(emText.getText().equals(""))
         {
-            email.setText("someone@example.com");
-            email.setForeground(new Color(0,0,0));
+            emText.setText("someone@example.com");
+            emText.setForeground(new Color(0,0,0));
         }
-    }//GEN-LAST:event_emailFocusLost
+    }//GEN-LAST:event_emTextFocusLost
 
-    private void PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFocusGained
+    private void passwordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusGained
         // TODO add your handling code here:
-        if(Password.getText().equals("***************"))
+        if(password.getText().equals("***************"))
         {
-            Password.setText("");
-            Password.setForeground(new Color(0,0,0));
+            password.setText("");
+            password.setForeground(new Color(0,0,0));
         }
-    }//GEN-LAST:event_PasswordFocusGained
+    }//GEN-LAST:event_passwordFocusGained
 
-    private void PasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFocusLost
+    private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
         // TODO add your handling code here:
-        if(Password.getText().equals(""))
+        if(password.getText().equals(""))
         {
-            Password.setText("***************");
-            Password.setForeground(new Color(0,0,0));
+            password.setText("***************");
+            password.setForeground(new Color(0,0,0));
         }
-    }//GEN-LAST:event_PasswordFocusLost
+    }//GEN-LAST:event_passwordFocusLost
 
     private void PhoneNumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PhoneNumberFocusGained
         // TODO add your handling code here:
-                          if(PhoneNumber.getText().equals("5xxxxxxxx"))
+                          if(PhoneNumber.getText().equals("05xxxxxxx"))
         {
             PhoneNumber.setText("");
             PhoneNumber.setForeground(new Color(0,0,0));
@@ -353,22 +380,187 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
                                if(PhoneNumber.getText().equals(""))
         {
-            PhoneNumber.setText("5xxxxxxxx");
+            PhoneNumber.setText("05xxxxxxx");
             PhoneNumber.setForeground(new Color(0,0,0));
         }
     }//GEN-LAST:event_PhoneNumberFocusLost
 
     private void RegNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegNextActionPerformed
-        // TODO add your handling code here:
-         MainInterface next = new MainInterface ();
-        next.setVisible(true);
+        try{                                        
+            // TODO add your handling code here:
+            String Email = emText.getText();
+            String firstName = Fname.getText();
+            String lastName = Lname.getText();
+            String Password = password.getText();
+            String Address = addressText.getText();
+            String phoneNum = PhoneNumber.getText();
+            String Date1 = Date.getText();
+            Date df = new SimpleDateFormat("dd/MM/yyyy").parse(Date1);
+            String edPattern = "\\d{2}/\\d{2}/\\d{4}";
+        java.util.regex.Pattern w = java.util.regex.Pattern.compile(edPattern);
+        java.util.regex.Matcher dates = w.matcher(Date1);
+        
+            
+            /*
+            - The password must be at least 8 characters long.
+            - The password must contain at least:
+            - one alpha character [a-zA-Z]
+            - one numeric character [0-9]
+            - one character that is not alpha or numeric, such as ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' " , < . > / ?
+            - The password must not contain spaces
+            */
+            String upperCase = "(.*[A-Z].*)";
+            String LowUpperCase = "(.*[a-zA-Z].*)";
+            String numbers = "(.*[0-9].*)";
+            String specialChars = "(.*[ ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?].*)";
+            String space = "(.*[   ].*)";
+            
+            String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+            java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+            java.util.regex.Matcher email = p.matcher(Email);
+            
+            if (lastName.matches(LowUpperCase) && dates.matches() &&email.matches() && Password.matches(upperCase) && Password.matches(numbers) && Password.matches(specialChars) && !Password.matches(space) && Password.length() > 8 && firstName.matches(LowUpperCase)
+                    && Address.matches(LowUpperCase) && Address.matches(numbers) && phoneNum.matches("[0-9]{10}")) {
+                
+                MainInterface next = new MainInterface ();
+                next.setVisible(true);
+                
+            }
+            
+            else if(EmailsList().contains(Email)){
+                JOptionPane.showMessageDialog(null, "Email Already Exists" );
+                emText.setText(null);
+                
+                
+            }else if (Email.isEmpty() && Password.isEmpty() && firstName.isEmpty() && lastName.isEmpty() && Address.isEmpty() && phoneNum.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !" );
+                
+            } else  {
+                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !" );
+                emText.setText(null);
+                Fname.setText(null);
+                Lname.setText(null);
+                password.setText(null);
+                addressText.setText(null);
+                PhoneNumber.setText(null);
+                Date.setText(null);
+                
+            }
+            JTextField emText = new JTextField();
+            emText.setText(Email);
+            
+            JTextField Fname = new JTextField();
+            Fname.setText(firstName);
+            
+            JTextField Lname = new JTextField();
+            Lname.setText(lastName);
+            
+            
+            JTextField password = new JTextField();
+            password.setText(Password);
+            
+            
+            JTextField addressText = new JTextField();
+            addressText.setText(Address);
+            
+            JTextField PhoneNumber = new JTextField();
+            PhoneNumber.setText(phoneNum);
+            
+            JTextField Date = new JTextField();
+            Date.setText(Date1);
+            
+            String file = "userData.txt";
+            try{
+                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file,true));
+                
+                Fname.write(fileWriter);
+                fileWriter.write(" ");
+                Lname.write(fileWriter);
+                fileWriter.write(" ");
+                emText.write(fileWriter);
+                fileWriter.write(" ");
+                
+                password.write(fileWriter);
+                fileWriter.write(" ");
+                addressText.write(fileWriter);
+                fileWriter.write(" ");
+                Date.write(fileWriter);
+                fileWriter.write(" ");
+                PhoneNumber.write(fileWriter);
+                fileWriter.newLine();
+                
+                fileWriter.close();
+                
+                
+                
+            } catch (IOException ex) {
+                
+            }
+            
+        } catch (ParseException ex) {
+            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+           
+           }
+        
     }//GEN-LAST:event_RegNextActionPerformed
+public ArrayList<String> EmailsList (){
+        try {
+            Scanner read = new Scanner(new File("userData.txt"));
+            //  String line;
+            while (read.hasNext()) {
+                String [] line = read.nextLine().split(" ");
+                fileList.add(line[0]); 
+                
+               
+            }
+                            read.close();
 
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return fileList;
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Welcome back = new Welcome ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void addressTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressTextFocusGained
+        // TODO add your handling code here:
+                if(addressText.getText().equals("Building number , street name ...etc"))
+        {
+            addressText.setText("");
+            addressText.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_addressTextFocusGained
+
+    private void addressTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressTextFocusLost
+        // TODO add your handling code here:
+                    if(addressText.getText().equals(""))
+        {
+            addressText.setText("Building number , street name ...etc");
+            addressText.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_addressTextFocusLost
+
+    private void DateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusGained
+        // TODO add your handling code here:
+               if(Date.getText().equals("dd/MM/yyyy"))
+        {
+            Date.setText("");
+            Date.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_DateFocusGained
+
+    private void DateFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusLost
+        // TODO add your handling code here:
+                 if(Date.getText().equals(""))
+        {
+            Date.setText("dd/MM/yyyy");
+            Date.setForeground(new Color(0,0,0));
+        }
+    }//GEN-LAST:event_DateFocusLost
 
     /**
      * @param args the command line arguments
@@ -406,15 +598,15 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Fname;
+    private javax.swing.JLabel Address;
+    public static javax.swing.JFormattedTextField Date;
+    public static javax.swing.JTextField Fname;
     private javax.swing.JComboBox<String> Language;
-    private javax.swing.JTextField Lname;
-    private javax.swing.JPasswordField Password;
-    private javax.swing.JTextField PhoneNumber;
+    public static javax.swing.JTextField Lname;
+    public static javax.swing.JTextField PhoneNumber;
     private javax.swing.JButton RegNext;
-    private javax.swing.JComboBox<String> boxnum;
-    private javax.swing.JComboBox<String> dd;
-    private javax.swing.JTextField email;
+    public static javax.swing.JTextField addressText;
+    public static javax.swing.JTextField emText;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -434,7 +626,6 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JComboBox<String> mm;
-    private javax.swing.JComboBox<String> yy;
+    public static javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
 }

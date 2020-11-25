@@ -5,13 +5,24 @@
  */
 package bikeservicesystem;
 
+import static bikeservicesystem.RentBike.Date;
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author NEW
  */
 public class FixBike extends javax.swing.JFrame {
+     static Double price;
 
     /**
      * Creates new form FixBike
@@ -33,15 +44,14 @@ public class FixBike extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BikeType = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        DateTime = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Desc = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        Date = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,43 +80,13 @@ public class FixBike extends javax.swing.JFrame {
         getContentPane().add(BikeType);
         BikeType.setBounds(22, 154, 170, 27);
 
-        jLabel2.setText("Date & Time");
+        jLabel2.setText("Date ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(28, 193, 77, 16);
+        jLabel2.setBounds(28, 193, 33, 16);
 
-        DateTime.setForeground(new java.awt.Color(204, 204, 204));
-        DateTime.setText("Nov 16 at 7:30 PM");
-        DateTime.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                DateTimeFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                DateTimeFocusLost(evt);
-            }
-        });
-        getContentPane().add(DateTime);
-        DateTime.setBounds(28, 215, 164, 36);
-
-        jLabel3.setText("Problem Description");
+        jLabel3.setText("What Kinds of Problem ? ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(28, 269, 128, 16);
-
-        Desc.setColumns(20);
-        Desc.setForeground(new java.awt.Color(204, 204, 204));
-        Desc.setRows(5);
-        Desc.setText("broken bike wheel ,chain falls off …etc");
-        Desc.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                DescFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                DescFocusLost(evt);
-            }
-        });
-        jScrollPane1.setViewportView(Desc);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(28, 297, 264, 158);
+        jLabel3.setBounds(28, 269, 170, 16);
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel4.setText("Bike Repairment");
@@ -157,6 +137,23 @@ public class FixBike extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(120, 730, 170, 71);
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tight Brakes", "Air Filter", "Low engine Oil", "Chain Slack ", "Drum Brakes " }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(20, 290, 170, 27);
+
+        Date.setForeground(new java.awt.Color(204, 204, 204));
+        Date.setText("dd/MM/yy");
+        Date.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DateFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DateFocusLost(evt);
+            }
+        });
+        getContentPane().add(Date);
+        Date.setBounds(20, 220, 170, 26);
+
         jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, 0, 410, 890);
@@ -164,42 +161,70 @@ public class FixBike extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DateTimeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateTimeFocusGained
-        // TODO add your handling code here:
-           if (DateTime.getText().equals("Nov 16 at 7:30 PM")) {
-            DateTime.setText("");
-            DateTime.setForeground(new Color(0, 0, 0));
-        }
-    }//GEN-LAST:event_DateTimeFocusGained
-
-    private void DateTimeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateTimeFocusLost
-        // TODO add your handling code here:
-           if (DateTime.getText().equals("")) {
-            DateTime.setText("Nov 16 at 7:30 PM");
-            DateTime.setForeground(new Color(0, 0, 0));
-        }
-    }//GEN-LAST:event_DateTimeFocusLost
-
-    private void DescFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DescFocusGained
-        // TODO add your handling code here:
-           if (Desc.getText().equals("broken bike wheel ,chain falls off …etc")) {
-            Desc.setText("");
-            Desc.setForeground(new Color(0, 0, 0));
-        }
-    }//GEN-LAST:event_DescFocusGained
-
-    private void DescFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DescFocusLost
-        // TODO add your handling code here:
-           if (Desc.getText().equals("")) {
-            Desc.setText("broken bike wheel ,chain falls off …etc");
-            Desc.setForeground(new Color(0, 0, 0));
-        }
-    }//GEN-LAST:event_DescFocusLost
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         Payment next = new Payment ();
-        next.setVisible(true);
+        try {                                         
+            // TODO add your handling code here:
+            PaymentFix next = new PaymentFix ();
+            next.setVisible(true);
+            
+            String Date1 = Date.getText();
+            Date df = new SimpleDateFormat("dd/MM/yy").parse(Date1);
+            
+            FixBike fix = new FixBike();
+            
+            String problem = (String) jComboBox1.getSelectedItem();
+            ArrayList<String> jComboBox1 = new ArrayList<String>();
+            jComboBox1.add("Tight Brakes");
+            jComboBox1.add("Air Filter");
+            jComboBox1.add("Low engine Oil");
+            jComboBox1.add("Chain Slack");
+            jComboBox1.add("Drum Brakes");
+            
+            //Bike type
+            String Bike = (String) BikeType.getSelectedItem();
+            ArrayList<String> BikeType = new ArrayList<String>();
+            BikeType.add("Street Bike");
+            BikeType.add("Sport Bike");
+            BikeType.add("Naked Bike");
+            BikeType.add("Cruiser Bike");
+            BikeType.add("Commuter Bike");
+            
+            String fixBikefile = "fixBikefile.txt";
+            try {
+                BufferedWriter fileWriter = new BufferedWriter(new FileWriter(fixBikefile, true));
+                
+                if (jComboBox1.get(0) == problem) {
+                    price = 55.0;
+                    fileWriter.write("Fix_Bike , "+"Bike Type: " + Bike + " Problem: " + jComboBox1.get(0) + " Price: " + price + " SAR "+" Date: " + Date1);
+                    
+                } else if (jComboBox1.get(1) == problem) {
+                    price = 65.0;
+                    fileWriter.write("Fix_Bike , "+"Bike Type: " + Bike + " Problem: " + jComboBox1.get(1) + " Price: " + price+" SAR "+" Date: " + Date1);
+                } else if (jComboBox1.get(2) == problem) {
+                    price = 80.0;
+                    fileWriter.write("Fix_Bike , "+"Bike Type: " + Bike + " Problem: " + jComboBox1.get(2) + " Price: " + price+" SAR "+" Date: " + Date1);
+                } else if (jComboBox1.get(3) == problem) {
+                    price = 72.0;
+                    fileWriter.write("Fix_Bike , "+"Bike Type: " + Bike + " Problem: " + jComboBox1.get(3) + " Price: " + price+" SAR "+" Date: " + Date1);
+                } else if (jComboBox1.get(4) == problem) {
+                    price = 90.0;
+                    fileWriter.write("Fix_Bike , "+"Bike Type: " + Bike + " Problem: " + jComboBox1.get(4) + " Price: " +price+" SAR "+" Date: " + Date1);
+                    
+                    
+                }
+                fileWriter.write(" ");
+                
+                fileWriter.newLine();
+                fileWriter.close();
+            } catch (IOException ex) {
+                
+            }
+            
+        } catch (ParseException ex) {
+            Logger.getLogger(FixBike.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -225,6 +250,22 @@ public class FixBike extends javax.swing.JFrame {
         ViewOrder back = new ViewOrder ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void DateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusGained
+        // TODO add your handling code here:
+            if (Date.getText().equals("dd/MM/yy")) {
+            Date.setText("");
+            Date.setForeground(new Color(0, 0, 0));
+        }
+    }//GEN-LAST:event_DateFocusGained
+
+    private void DateFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusLost
+        // TODO add your handling code here:
+            if (Date.getText().equals("")) {
+            Date.setText("dd/MM/yy");
+            Date.setForeground(new Color(0, 0, 0));
+        }
+    }//GEN-LAST:event_DateFocusLost
 
     /**
      * @param args the command line arguments
@@ -263,18 +304,17 @@ public class FixBike extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> BikeType;
-    private javax.swing.JTextField DateTime;
-    private javax.swing.JTextArea Desc;
+    public static javax.swing.JFormattedTextField Date;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

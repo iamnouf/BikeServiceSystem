@@ -6,12 +6,22 @@
 package bikeservicesystem;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author NEW
  */
 public class RentBike extends javax.swing.JFrame {
+     static Double price;
 
     /**
      * Creates new form RentBike
@@ -37,7 +47,7 @@ public class RentBike extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jSpinner1 = new javax.swing.JSpinner();
         jComboBox2 = new javax.swing.JComboBox<>();
-        DateTime = new javax.swing.JFormattedTextField();
+        Date = new javax.swing.JFormattedTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -71,9 +81,9 @@ public class RentBike extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 280, 81, 16);
 
-        jLabel4.setText("Date&Time");
+        jLabel4.setText("Date");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(60, 330, 69, 16);
+        jLabel4.setBounds(60, 330, 29, 16);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Street Bike", "Sport Bike", "Naked Bike", "Cruiser Bike", "Commuter Bike" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,17 +100,23 @@ public class RentBike extends javax.swing.JFrame {
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(50, 300, 128, 27);
 
-        DateTime.setText("Nov 16 at 7:30 PM");
-        DateTime.addFocusListener(new java.awt.event.FocusAdapter() {
+        Date.setForeground(new java.awt.Color(204, 204, 204));
+        Date.setText("dd/MM/yy");
+        Date.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                DateTimeFocusGained(evt);
+                DateFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                DateTimeFocusLost(evt);
+                DateFocusLost(evt);
             }
         });
-        getContentPane().add(DateTime);
-        DateTime.setBounds(50, 350, 176, 26);
+        Date.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DateActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Date);
+        Date.setBounds(50, 350, 176, 26);
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton2.setForeground(new java.awt.Color(204, 204, 204));
@@ -159,27 +175,108 @@ public class RentBike extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void DateTimeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateTimeFocusGained
+    private void DateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusGained
         // TODO add your handling code here:
-          if (DateTime.getText().equals("Nov 16 at 7:30 PM")) {
-            DateTime.setText("");
-            DateTime.setForeground(new Color(0, 0, 0));
+          if (Date.getText().equals("dd/MM/yy")) {
+            Date.setText("");
+            Date.setForeground(new Color(0, 0, 0));
         }
-    }//GEN-LAST:event_DateTimeFocusGained
+    }//GEN-LAST:event_DateFocusGained
 
-    private void DateTimeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateTimeFocusLost
+    private void DateFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DateFocusLost
         // TODO add your handling code here:
-          if (DateTime.getText().equals("Nov 16 at 7:30 PM")) {
-            DateTime.setText("");
-            DateTime.setForeground(new Color(0, 0, 0));
+          if (Date.getText().equals("")) {
+            Date.setText("dd/MM/yy");
+            Date.setForeground(new Color(0, 0, 0));
         }
-    }//GEN-LAST:event_DateTimeFocusLost
+    }//GEN-LAST:event_DateFocusLost
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        Payment next = new Payment ();
-        next.setVisible(true);
+            try {                                         
+                // TODO add your handling code here:
+                
+
+                // Date
+                String Date1 = Date.getText();
+                Date df = new SimpleDateFormat("dd/MM/yy").parse(Date1);
+                
+                
+                // Bike Type
+                String Bike = (String) jComboBox1.getSelectedItem();
+                ArrayList<String> jComboBox1 = new ArrayList<String>();
+                jComboBox1.add("Street Bike");
+                jComboBox1.add("Sport Bike");
+                jComboBox1.add("Naked Bike");
+                jComboBox1.add("Cruiser Bike");
+                jComboBox1.add("Commuter Bike");
+                
+                //Qty
+                int qty = (int) jSpinner1.getValue();
+                jSpinner1.setValue(qty);
+                
+                //Hours
+                String rent = (String) jComboBox2.getSelectedItem();
+                ArrayList<String> jComboBox2 = new ArrayList<String>();
+                jComboBox2.add("-");
+                jComboBox2.add("-");
+                jComboBox2.add("2 hours");
+                jComboBox2.add("3 hours");
+                jComboBox2.add("4 hours");
+                jComboBox2.add("5 hours");
+                jComboBox2.add("6 hours");
+                jComboBox2.add("7 hours");
+                jComboBox2.add("8 hours");
+                jComboBox2.add("9 hours");
+                jComboBox2.add("10 hours");
+                jComboBox2.add("11 hours");
+                jComboBox2.add("12 hours");
+                jComboBox2.add("24 hours");
+                
+                //
+                String fileRent = "RentInfo.txt";
+                try {
+                    BufferedWriter fileWriter = new BufferedWriter(new FileWriter(fileRent, true));
+                    
+                    for (int i = 0; jComboBox2.size() > i; i++)
+                        
+                        if (jComboBox1.get(0) == Bike && jComboBox2.get(i).equals(rent)) {
+                            price = 35.0*qty*i;
+                            fileWriter.write("Book_Bike " +"Bike = " + jComboBox1.get(0) + " Price : " + price + " SAR " + " , Qty : " + qty + " , Rental Hours : " + rent + " , Date&Time : " + Date1);
+                            
+                            //Show payment interface
+                            Payment next = new Payment ();
+                            next.setVisible(true);
+                            
+                        } else if (jComboBox1.get(1) == Bike && jComboBox2.get(i).equals(rent)) {
+                            price = 30.0*qty*i;
+                            fileWriter.write("Book_Bike " +"Bike = " + jComboBox1.get(1) + " Price : " + price + " SAR " + " , Qty : " + qty + " , Rental Hours : " + rent + " , Date&Time : " + Date1);
+                            //Show payment interface
+                            Payment next = new Payment ();
+                            next.setVisible(true);
+                        } else if (jComboBox1.get(2) == Bike && jComboBox2.get(i).equals(rent)) {
+                            price = 25.0*qty*i;
+                            fileWriter.write("Book_Bike " + "Bike = " + jComboBox1.get(2) + " Price : " + price + " SAR " + " , Qty : " + qty + " , Rental Hours : " + rent + " , Date&Time : " + Date1);
+                            //Show payment interface
+                            Payment next = new Payment ();
+                            next.setVisible(true);
+                        } else if (jComboBox1.get(3) == Bike && jComboBox2.get(i).equals(rent)) {
+                            price = 20.0*qty*i;
+                            fileWriter.write("Book_Bike " + "Bike = " + jComboBox1.get(3) + " Price : " + price + " SAR " + " , Qty : " + qty + " , Rental Hours : " + rent + " , Date&Time : " + Date1);
+                            //Show payment interface
+                            Payment next = new Payment ();
+                            next.setVisible(true);
+                        } else if (jComboBox1.get(4) == Bike && jComboBox2.get(i).equals(rent) ) {
+                            price = 20.0*qty*i;
+                            fileWriter.write("Book_Bike " + "Bike = " + jComboBox1.get(4) + " Price : " + price + " SAR " + " , Qty : " + qty + " , Rental Hours : " + rent + " , Date&Time : " + Date1);
+                            Payment next = new Payment ();
+                            next.setVisible(true);
+                        }
+                    fileWriter.newLine();
+                    fileWriter.close();
+                } catch (IOException ex) {
+                }
+            } catch (ParseException ex) {
+            }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -205,6 +302,10 @@ public class RentBike extends javax.swing.JFrame {
         MainInterface back = new MainInterface ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,7 +343,7 @@ public class RentBike extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField DateTime;
+    public static javax.swing.JFormattedTextField Date;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -6,12 +6,20 @@
 package bikeservicesystem;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author NEW
  */
 public class Login extends javax.swing.JFrame {
+static     ArrayList<String> fileList = new ArrayList<>();
 
     /**
      * Creates new form Login
@@ -165,10 +173,60 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         MainInterface next = new MainInterface ();
+       
+           
+       String Email = jFormattedTextField1.getText();
+        String Password = jPasswordField1.getText();
+            
+            
+       if (EmailsList().contains(Email) && PasswordList().contains(Password)&&!Email.isEmpty()&&!Password.isEmpty()) {
+           
+                   
+                   MainInterface next = new MainInterface ();
         next.setVisible(true);
+                
+}  else {
+     JOptionPane.showMessageDialog(null, "Invalid Login Detalis !" );  
+            
+                }
     }//GEN-LAST:event_jButton1ActionPerformed
+    public ArrayList<String> EmailsList (){
+        try {
+            Scanner read = new Scanner(new File("userData.txt"));
+            //  String line;
+            while (read.hasNext()) {
+                String [] line = read.nextLine().split(" ");
+                fileList.add(line[0]); 
+                
+               
+            }
+                            read.close();
 
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return fileList;
+    }
+    
+       public ArrayList<String> PasswordList (){
+        try {
+            Scanner read = new Scanner(new File("userData.txt"));
+            //  String line;
+            while (read.hasNext()) {
+                String [] line = read.nextLine().split(" ");
+                fileList.add(line[3]);
+               
+            }
+                            read.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return fileList;
+    }
+       
+       
+     
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
@@ -272,7 +330,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    public static javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -280,7 +338,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPasswordField jPasswordField1;
+    public static javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     // End of variables declaration//GEN-END:variables
 }

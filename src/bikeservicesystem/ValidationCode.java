@@ -144,8 +144,23 @@ public class ValidationCode extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        NewPassword next = new NewPassword ();
+        String Code = Codedigit.getText();
+
+                String numbers = "(.*[0-9].*)";
+                
+                if(Code.matches(numbers) && Code.length() == 6 && !Code.isEmpty() ){
+                        NewPassword next = new NewPassword ();
         next.setVisible(true);
+                }
+              
+                else
+                {
+                        JOptionPane.showMessageDialog(null, "Invalid Detalis !" );  
+
+                
+                    Codedigit.setText(null);
+                }
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
