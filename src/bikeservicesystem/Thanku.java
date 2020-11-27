@@ -54,17 +54,17 @@ public class Thanku extends javax.swing.JFrame {
         jButton9.setText("Orders");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setText("Thank you ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 460, 90, 22);
+        jLabel1.setBounds(100, 90, 180, 110);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("The staff will be in your location on time");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 510, 256, 16);
+        jLabel3.setBounds(30, 240, 340, 50);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("Done");
@@ -74,11 +74,12 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(150, 560, 85, 30);
+        jButton1.setBounds(110, 390, 160, 50);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel4.setText("Your Order Was Successful !");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(120, 490, 176, 16);
+        jLabel4.setBounds(40, 170, 310, 100);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Settings");
@@ -89,7 +90,7 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(270, 470, 120, 80);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -100,7 +101,7 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 470, 150, 80);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -111,16 +112,11 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 71);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/checked.png")); // NOI18N
+        jButton4.setBounds(0, 470, 120, 80);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 140, 300, 330);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel5.setBounds(50, 50, 300, 330);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 410, 890);
+        jLabel2.setBounds(0, 0, 390, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

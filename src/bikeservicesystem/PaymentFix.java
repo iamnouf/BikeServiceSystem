@@ -53,39 +53,42 @@ public class PaymentFix extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
         jLabel1.setText("Payment Information");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(110, 40, 182, 25);
+        jLabel1.setBounds(90, 30, 270, 25);
 
+        jLabel2.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel2.setText("Total Price is :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(19, 132, 89, 16);
+        jLabel2.setBounds(30, 170, 130, 17);
 
         jTextField3.setEditable(false);
         jTextField3.setForeground(new java.awt.Color(51, 51, 51));
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(114, 127, 61, 26);
+        jTextField3.setBounds(140, 160, 61, 30);
 
+        jLabel3.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel3.setText("SR");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(181, 132, 34, 16);
+        jLabel3.setBounds(200, 170, 80, 17);
 
-        jLabel4.setFont(new java.awt.Font("Ebrima", 0, 14)); // NOI18N
-        jLabel4.setText("Please Enter Credit Card Information");
+        jLabel4.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel4.setText("Please Enter Credit Card Information :");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 170, 261, 25);
+        jLabel4.setBounds(50, 210, 300, 25);
 
-        jLabel7.setText("Expires date ");
+        jLabel7.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel7.setText("Expires date : ");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(200, 210, 81, 16);
+        jLabel7.setBounds(210, 250, 130, 17);
 
-        jLabel5.setText("Card number");
+        jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel5.setText("Card number :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 210, 81, 16);
+        jLabel5.setBounds(50, 250, 130, 17);
 
         jTextField2.setForeground(new java.awt.Color(204, 204, 204));
         jTextField2.setText("4847 **** **** ****");
@@ -103,11 +106,12 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(40, 240, 137, 35);
+        jTextField2.setBounds(50, 280, 137, 35);
 
-        jLabel6.setText("Name on Card");
+        jLabel6.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel6.setText("Name on Card :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 290, 89, 14);
+        jLabel6.setBounds(50, 330, 140, 14);
 
         jTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("Name On Card");
@@ -120,7 +124,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(40, 310, 137, 35);
+        jTextField1.setBounds(50, 350, 137, 35);
 
         jFormattedTextField2.setForeground(new java.awt.Color(204, 204, 204));
         jFormattedTextField2.setText("3-4 digit code");
@@ -138,11 +142,12 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jFormattedTextField2);
-        jFormattedTextField2.setBounds(200, 310, 101, 35);
+        jFormattedTextField2.setBounds(210, 350, 101, 35);
 
-        jLabel8.setText("CVV Number");
+        jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel8.setText("CVV Number :");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(200, 290, 79, 16);
+        jLabel8.setBounds(210, 330, 130, 17);
 
         jFormattedTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jFormattedTextField1.setText("MM/YY");
@@ -160,10 +165,10 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(200, 240, 101, 35);
+        jFormattedTextField1.setBounds(210, 280, 101, 35);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton1.setText("SHOW PRICE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,10 +176,10 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(217, 470, 160, 52);
+        jButton1.setBounds(220, 500, 160, 52);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton2.setText("NEXT");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +187,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(217, 520, 160, 52);
+        jButton2.setBounds(40, 500, 160, 52);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Settings");
@@ -193,7 +198,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(290, 730, 120, 71);
+        jButton4.setBounds(290, 570, 120, 80);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -204,7 +209,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 570, 170, 80);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Home");
@@ -215,7 +220,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 730, 120, 71);
+        jButton6.setBounds(0, 570, 120, 80);
 
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
@@ -228,11 +233,8 @@ public class PaymentFix extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3);
         jButton3.setBounds(0, 0, 80, 90);
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
-        jLabel9.setText("jLabel9");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 420, 890);
+        jLabel9.setBounds(0, 0, 410, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

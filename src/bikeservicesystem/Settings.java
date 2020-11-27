@@ -56,36 +56,43 @@ public class Settings extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Account Information");
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel1.setText("Account Information :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 160, 130, 16);
+        jLabel1.setBounds(20, 160, 200, 17);
 
-        jLabel2.setText("Name");
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel2.setText("Name :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 200, 36, 16);
+        jLabel2.setBounds(40, 210, 110, 17);
 
-        jLabel3.setText("Email");
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel3.setText("Email :");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 240, 34, 16);
+        jLabel3.setBounds(40, 250, 110, 17);
 
-        jLabel4.setText("Password");
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel4.setText("Password :");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 270, 59, 16);
+        jLabel4.setBounds(40, 280, 130, 17);
 
-        jLabel5.setText("Phone Number");
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel5.setText("Phone Number :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 310, 92, 16);
+        jLabel5.setBounds(40, 320, 170, 17);
 
-        jLabel6.setText("Date of Birth");
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel6.setText("Date of Birth :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 370, 79, 16);
+        jLabel6.setBounds(40, 390, 150, 17);
 
-        jLabel7.setText("Language");
+        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel7.setText("Language :");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(20, 410, 60, 16);
+        jLabel7.setBounds(40, 430, 130, 17);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton2.setText("SHOW INFO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +100,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(250, 460, 130, 52);
+        jButton2.setBounds(230, 510, 130, 52);
 
         jTextField1.setEditable(false);
         jTextField1.setForeground(new java.awt.Color(51, 51, 51));
@@ -107,25 +114,25 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(120, 190, 170, 26);
+        jTextField1.setBounds(160, 210, 170, 26);
 
         jTextField2.setEditable(false);
         jTextField2.setForeground(new java.awt.Color(51, 51, 51));
         jTextField2.setText("someone@example.com");
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(120, 230, 170, 26);
+        jTextField2.setBounds(160, 250, 170, 26);
 
         jPasswordField1.setEditable(false);
         jPasswordField1.setForeground(new java.awt.Color(51, 51, 51));
         jPasswordField1.setText("************");
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(120, 260, 170, 26);
+        jPasswordField1.setBounds(160, 280, 170, 26);
 
         jTextField3.setEditable(false);
         jTextField3.setForeground(new java.awt.Color(51, 51, 51));
         jTextField3.setText("05xxxxxxxx");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(120, 300, 170, 26);
+        jTextField3.setBounds(160, 320, 170, 26);
 
         jTextField4.setEditable(false);
         jTextField4.setForeground(new java.awt.Color(51, 51, 51));
@@ -136,16 +143,16 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(120, 360, 170, 26);
+        jTextField4.setBounds(160, 390, 170, 26);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Arabic" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(120, 400, 170, 27);
+        jComboBox1.setBounds(160, 430, 170, 27);
 
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel8.setText("Settings");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(149, 31, 70, 22);
+        jLabel8.setBounds(150, 20, 140, 50);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Settings");
@@ -156,7 +163,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(290, 590, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -167,7 +174,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 590, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -178,10 +185,10 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 71);
+        jButton4.setBounds(0, 590, 120, 71);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton6.setText("SIGN OUT");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,21 +196,20 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(250, 520, 130, 52);
+        jButton6.setBounds(60, 510, 130, 52);
 
         jTextField5.setEditable(false);
         jTextField5.setForeground(new java.awt.Color(51, 51, 51));
         jTextField5.setText("Address");
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(120, 330, 170, 26);
+        jTextField5.setBounds(160, 350, 170, 26);
 
-        jLabel10.setText("Address");
+        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel10.setText("Address :");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(20, 340, 53, 16);
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
+        jLabel10.setBounds(40, 350, 120, 17);
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 414, 890);
+        jLabel9.setBounds(0, 0, 0, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

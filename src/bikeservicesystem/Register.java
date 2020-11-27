@@ -74,41 +74,40 @@ public class Register extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
-        jLabel1.setText("Create an account");
+        jLabel1.setText("Create an account :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 140, 157, 22);
+        jLabel1.setBounds(30, 120, 169, 22);
 
         jLabel2.setText("First Name");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 200, 68, 16);
+        jLabel2.setBounds(30, 160, 68, 16);
 
         jLabel3.setText("Last Name");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(180, 200, 66, 16);
+        jLabel3.setBounds(180, 160, 66, 16);
 
         jLabel4.setText("Email");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 260, 34, 16);
+        jLabel4.setBounds(30, 220, 34, 16);
 
         jLabel5.setText("Password");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 310, 59, 16);
+        jLabel5.setBounds(30, 270, 59, 16);
 
         jLabel6.setText("Phone Number");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 380, 92, 16);
+        jLabel6.setBounds(30, 340, 92, 16);
 
         jLabel7.setText("Date of Birth");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 510, 79, 16);
+        jLabel7.setBounds(30, 470, 79, 16);
 
         jLabel8.setText("Language");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 570, 60, 16);
+        jLabel8.setBounds(30, 530, 60, 16);
 
         Fname.setForeground(new java.awt.Color(204, 204, 204));
         Fname.setText("First Name");
@@ -121,7 +120,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Fname);
-        Fname.setBounds(30, 220, 130, 26);
+        Fname.setBounds(30, 180, 130, 26);
 
         Lname.setForeground(new java.awt.Color(204, 204, 204));
         Lname.setText("Last Name");
@@ -134,7 +133,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Lname);
-        Lname.setBounds(170, 220, 130, 26);
+        Lname.setBounds(170, 180, 130, 26);
 
         emText.setForeground(new java.awt.Color(204, 204, 204));
         emText.setText("someone@example.com");
@@ -152,7 +151,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(emText);
-        emText.setBounds(30, 280, 240, 26);
+        emText.setBounds(30, 240, 240, 26);
 
         password.setForeground(new java.awt.Color(204, 204, 204));
         password.setText("***************");
@@ -165,7 +164,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(password);
-        password.setBounds(30, 330, 240, 26);
+        password.setBounds(30, 290, 240, 26);
 
         PhoneNumber.setForeground(new java.awt.Color(204, 204, 204));
         PhoneNumber.setText("05xxxxxxx");
@@ -178,53 +177,53 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PhoneNumber);
-        PhoneNumber.setBounds(30, 400, 240, 26);
+        PhoneNumber.setBounds(30, 360, 240, 26);
 
         Language.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Engilsh", "Arabic" }));
         getContentPane().add(Language);
-        Language.setBounds(30, 590, 180, 27);
+        Language.setBounds(30, 550, 180, 27);
 
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("*");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(100, 200, 14, 16);
+        jLabel9.setBounds(100, 160, 14, 16);
 
         jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("*");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(250, 200, 6, 16);
+        jLabel10.setBounds(250, 160, 6, 16);
 
         jLabel11.setForeground(new java.awt.Color(255, 0, 0));
         jLabel11.setText("*");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(70, 260, 6, 16);
+        jLabel11.setBounds(70, 220, 6, 16);
 
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("*");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(90, 310, 6, 16);
+        jLabel12.setBounds(90, 270, 6, 16);
 
         jLabel13.setForeground(new java.awt.Color(255, 0, 0));
         jLabel13.setText("*");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(130, 380, 6, 16);
+        jLabel13.setBounds(130, 340, 6, 16);
 
         jLabel14.setForeground(new java.awt.Color(255, 0, 0));
         jLabel14.setText("*");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(110, 510, 6, 16);
+        jLabel14.setBounds(110, 470, 6, 16);
 
         jLabel15.setForeground(new java.awt.Color(255, 0, 0));
         jLabel15.setText("*");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(100, 570, 6, 16);
+        jLabel15.setBounds(100, 530, 6, 16);
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 0, 0));
         jLabel16.setText("Containing at least one number,character,and symbol and More than 8 Character");
         jLabel16.setToolTipText("");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(40, 360, 370, 10);
+        jLabel16.setBounds(40, 320, 370, 10);
 
         RegNext.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         RegNext.setText("Register");
@@ -260,12 +259,12 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(addressText);
-        addressText.setBounds(30, 460, 240, 26);
+        addressText.setBounds(30, 420, 240, 26);
 
-        jLabel17.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel17.setText("Register");
         getContentPane().add(jLabel17);
-        jLabel17.setBounds(160, 40, 70, 22);
+        jLabel17.setBounds(150, 30, 150, 30);
 
         Date.setForeground(new java.awt.Color(204, 204, 204));
         Date.setText("dd/MM/yyyy");
@@ -278,15 +277,13 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Date);
-        Date.setBounds(30, 530, 240, 26);
+        Date.setBounds(30, 490, 240, 26);
 
         Address.setText("Address");
         getContentPane().add(Address);
-        Address.setBounds(30, 440, 51, 16);
-
-        jLabel18.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 3.png")); // NOI18N
+        Address.setBounds(30, 400, 51, 16);
         getContentPane().add(jLabel18);
-        jLabel18.setBounds(0, 0, 410, 890);
+        jLabel18.setBounds(0, 0, 410, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -42,6 +42,7 @@ public class MainInterface extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -85,10 +86,9 @@ public class MainInterface extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(410, 890));
         getContentPane().setLayout(null);
 
-        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jButton5.setText("Rent Bike");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -97,9 +97,9 @@ public class MainInterface extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(80, 320, 249, 95);
+        jButton5.setBounds(80, 210, 249, 70);
 
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jButton1.setText("Fix Bike");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +108,7 @@ public class MainInterface extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(80, 420, 249, 95);
+        jButton1.setBounds(80, 340, 249, 70);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Settings");
@@ -119,7 +119,7 @@ public class MainInterface extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(290, 730, 120, 71);
+        jButton4.setBounds(290, 550, 120, 70);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Orders");
@@ -130,7 +130,7 @@ public class MainInterface extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(120, 730, 170, 71);
+        jButton6.setBounds(120, 550, 170, 70);
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Home");
@@ -141,13 +141,16 @@ public class MainInterface extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(0, 730, 120, 71);
+        jButton7.setBounds(0, 550, 120, 70);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 4.png")); // NOI18N
-        jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(410, 890));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 420, 890);
+        jLabel1.setBounds(0, 0, 410, 620);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel2.setText("Home");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(150, 30, 110, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -233,6 +236,7 @@ public class MainInterface extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

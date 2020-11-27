@@ -81,7 +81,6 @@ public class ViewOrder extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jTextField23.setEditable(false);
@@ -141,7 +140,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 730, 120, 71);
+        jButton6.setBounds(0, 580, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -152,7 +151,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 580, 170, 71);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Settings");
@@ -163,7 +162,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(290, 580, 120, 71);
 
         jButton7.setText("Cancel");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -174,25 +173,25 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton7);
         jButton7.setBounds(320, 260, 86, 29);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         jLabel3.setText("Orders");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 130, 50, 17);
+        jLabel3.setBounds(20, 130, 80, 20);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         jLabel4.setText("Date");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 130, 40, 17);
+        jLabel4.setBounds(130, 130, 70, 20);
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         jLabel5.setText("State");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(240, 130, 50, 17);
+        jLabel5.setBounds(240, 130, 80, 20);
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         jLabel6.setText("Manage");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(340, 130, 60, 17);
+        jLabel6.setBounds(330, 130, 90, 20);
 
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -361,17 +360,14 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(267, 520, 120, 50);
+        jButton8.setBounds(140, 500, 120, 50);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel2.setText("Orders");
+        jLabel2.setText("My Orders");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 30, 100, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel2.setBounds(140, 30, 160, 40);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 420, 890);
+        jLabel1.setBounds(0, 0, 420, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

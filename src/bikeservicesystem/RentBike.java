@@ -53,13 +53,13 @@ static String rent = "Rent_Bike";
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jButton1.setText("NEXT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,23 +67,27 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(270, 520, 107, 52);
+        jButton1.setBounds(250, 500, 130, 50);
 
-        jLabel1.setText("Bike Type");
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel1.setText("Bike Type :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(60, 180, 60, 16);
+        jLabel1.setBounds(50, 150, 110, 17);
 
-        jLabel2.setText("Qty");
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel2.setText("Qty :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(60, 230, 22, 16);
+        jLabel2.setBounds(50, 230, 80, 17);
 
-        jLabel3.setText("Rental Hours");
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel3.setText("Rental Hours :");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 280, 81, 16);
+        jLabel3.setBounds(50, 300, 130, 17);
 
-        jLabel4.setText("Date");
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel4.setText("Date :");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(60, 330, 29, 16);
+        jLabel4.setBounds(50, 380, 80, 17);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Street Bike", "Sport Bike", "Naked Bike", "Cruiser Bike", "Commuter Bike" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,13 +96,13 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(50, 200, 128, 27);
+        jComboBox1.setBounds(60, 180, 128, 27);
         getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(60, 250, 43, 26);
+        jSpinner1.setBounds(70, 250, 43, 26);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours", "8 hours", "9 hours", "10 hours", "11 hours", "12 hours" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(50, 300, 128, 27);
+        jComboBox2.setBounds(70, 330, 128, 27);
 
         Date.setForeground(new java.awt.Color(204, 204, 204));
         Date.setText("dd/MM/yy");
@@ -116,7 +120,7 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(Date);
-        Date.setBounds(50, 350, 176, 26);
+        Date.setBounds(60, 410, 176, 26);
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton2.setForeground(new java.awt.Color(204, 204, 204));
@@ -139,7 +143,7 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(290, 580, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -150,7 +154,7 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 580, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -161,12 +165,14 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 71);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
-        jLabel5.setText("jLabel5");
+        jButton4.setBounds(0, 580, 120, 71);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 410, 900);
+        jLabel5.setBounds(0, 0, 410, 670);
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel6.setText("Rent a Bike");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(130, 20, 180, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -356,6 +362,7 @@ static String rent = "Rent_Bike";
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JSpinner jSpinner1;
     // End of variables declaration//GEN-END:variables
 }

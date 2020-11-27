@@ -66,26 +66,25 @@ public class Welcome extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel2.setText("Bike Service System");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 330, 170, 22);
+        jLabel2.setBounds(100, 150, 170, 22);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel1.setText("Welcome to");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 270, 135, 30);
+        jLabel1.setBounds(80, 80, 210, 40);
 
         jLabel3.setText(" Choose your bike, get it delivered to your");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 360, 265, 16);
+        jLabel3.setBounds(50, 190, 265, 16);
 
         jLabel4.setText(" doorstep, and ride!");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 380, 131, 16);
+        jLabel4.setBounds(120, 220, 131, 16);
 
         LoginButton.setBackground(new java.awt.Color(255, 255, 255));
         LoginButton.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -96,7 +95,7 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LoginButton);
-        LoginButton.setBounds(130, 430, 145, 59);
+        LoginButton.setBounds(90, 320, 180, 50);
 
         RegButton.setBackground(new java.awt.Color(255, 255, 255));
         RegButton.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -107,13 +106,11 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
         getContentPane().add(RegButton);
-        RegButton.setBounds(130, 500, 145, 55);
+        RegButton.setBounds(90, 390, 180, 50);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(90, 310, 211, 10);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 1.png")); // NOI18N
+        jSeparator1.setBounds(71, 130, 230, 10);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 420, 900);
+        jLabel5.setBounds(0, -20, 370, 570);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

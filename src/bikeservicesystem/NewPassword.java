@@ -47,28 +47,27 @@ public class NewPassword extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
         jLabel1.setText("Change Password ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 40, 157, 25);
+        jLabel1.setBounds(100, 40, 220, 25);
 
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("* Contain both upper and lowercase letters");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 160, 269, 16);
+        jLabel2.setBounds(40, 310, 269, 16);
 
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setText("* Contain both numbers and letters");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 180, 222, 16);
+        jLabel3.setBounds(40, 330, 222, 16);
 
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("* Contain at least one symbol character");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 200, 248, 16);
+        jLabel4.setBounds(40, 350, 248, 16);
 
         jPasswordField1.setForeground(new java.awt.Color(204, 204, 204));
         jPasswordField1.setText("***************");
@@ -81,7 +80,7 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(150, 260, 174, 35);
+        jPasswordField1.setBounds(190, 190, 174, 35);
 
         jPasswordField2.setForeground(new java.awt.Color(204, 204, 204));
         jPasswordField2.setText("***************");
@@ -94,19 +93,19 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField2);
-        jPasswordField2.setBounds(150, 320, 174, 35);
+        jPasswordField2.setBounds(190, 250, 174, 35);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("New Password");
+        jLabel5.setText("New Password :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 260, 113, 35);
+        jLabel5.setBounds(40, 190, 113, 35);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Confirm Password");
+        jLabel6.setText("Confirm Password :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 320, 126, 35);
+        jLabel6.setBounds(40, 250, 150, 35);
 
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton1.setText("Change");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,9 +113,9 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(220, 500, 170, 40);
+        jButton1.setBounds(210, 490, 170, 40);
 
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +123,7 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 560, 170, 40);
+        jButton2.setBounds(20, 490, 170, 40);
 
         jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton4.setForeground(new java.awt.Color(204, 204, 204));
@@ -147,7 +146,7 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(290, 580, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -158,7 +157,7 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 580, 170, 71);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Home");
@@ -169,11 +168,9 @@ public class NewPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 730, 120, 71);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
+        jButton6.setBounds(0, 580, 120, 71);
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 0, 440, 900);
+        jLabel7.setBounds(0, -10, 410, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

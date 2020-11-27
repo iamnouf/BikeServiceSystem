@@ -56,7 +56,6 @@ static String fix = "Fix_Bike";
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -72,27 +71,29 @@ static String fix = "Fix_Bike";
         getContentPane().add(jButton6);
         jButton6.setBounds(0, 0, 80, 90);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel1.setText("Bike Type");
+        jLabel1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 18)); // NOI18N
+        jLabel1.setText("Bike Type :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(31, 125, 65, 17);
+        jLabel1.setBounds(40, 160, 110, 22);
 
         BikeType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Street Bike", "Sport Bike", "Naked Bike", "Cruiser Bike", "Commuter Bike" }));
         getContentPane().add(BikeType);
-        BikeType.setBounds(22, 154, 170, 27);
+        BikeType.setBounds(30, 200, 200, 27);
 
-        jLabel2.setText("Date ");
+        jLabel2.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 18)); // NOI18N
+        jLabel2.setText("Date : ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(28, 193, 33, 16);
+        jLabel2.setBounds(40, 270, 90, 22);
 
+        jLabel3.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 18)); // NOI18N
         jLabel3.setText("What Kinds of Problem ? ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(28, 269, 170, 16);
+        jLabel3.setBounds(40, 380, 240, 22);
 
-        jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 36)); // NOI18N
         jLabel4.setText("Bike Repairment");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(109, 26, 141, 22);
+        jLabel4.setBounds(80, 30, 300, 43);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -103,7 +104,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(270, 520, 107, 52);
+        jButton1.setBounds(240, 500, 107, 52);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Settings");
@@ -114,7 +115,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(270, 590, 120, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -125,7 +126,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 71);
+        jButton4.setBounds(0, 590, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -136,11 +137,16 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 590, 150, 71);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tight Brakes", "Air Filter", "Low engine Oil", "Chain Slack ", "Drum Brakes " }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(20, 290, 170, 27);
+        jComboBox1.setBounds(40, 430, 170, 20);
 
         Date.setForeground(new java.awt.Color(204, 204, 204));
         Date.setText("dd/MM/yy");
@@ -153,11 +159,11 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(Date);
-        Date.setBounds(20, 220, 170, 26);
+        Date.setBounds(40, 310, 200, 26);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
+        jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 410, 890);
+        jLabel5.setBounds(-10, -10, 440, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -267,6 +273,10 @@ static String fix = "Fix_Bike";
             Date.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_DateFocusLost
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

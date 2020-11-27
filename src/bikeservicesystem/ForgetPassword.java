@@ -41,27 +41,31 @@ public class ForgetPassword extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("Forget your Password ?");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(120, 200, 220, 22);
+        jLabel1.setBounds(70, 170, 300, 30);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel2.setText("Enter your Email and we’ll send you a link");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 270, 262, 16);
+        jLabel2.setBounds(20, 250, 390, 22);
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel3.setText("To reset your password to the address we");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 290, 262, 16);
+        jLabel3.setBounds(20, 270, 390, 22);
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel4.setText("Have for your account.");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 320, 143, 16);
+        jLabel4.setBounds(100, 300, 270, 22);
 
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton1.setText("Reset my Password");
@@ -71,7 +75,7 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(120, 390, 192, 37);
+        jButton1.setBounds(100, 440, 192, 37);
 
         jTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("someone@example.com");
@@ -84,7 +88,7 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(100, 350, 239, 26);
+        jTextField1.setBounds(80, 360, 239, 40);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
@@ -108,7 +112,7 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 730, 120, 71);
+        jButton3.setBounds(290, 530, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -119,7 +123,7 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 170, 71);
+        jButton5.setBounds(120, 530, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -130,12 +134,14 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 71);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/fatima/Desktop/iPhone XR, XS Max, 11 – 13.png")); // NOI18N
-        jLabel5.setText("jLabel5");
+        jButton4.setBounds(0, 530, 120, 71);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 420, 900);
+        jLabel5.setBounds(0, 0, 410, 590);
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel6.setText("Reset Password");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(110, 30, 240, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -248,6 +254,7 @@ public class ForgetPassword extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
