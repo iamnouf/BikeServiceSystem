@@ -93,7 +93,7 @@ static String fix = "Fix_Bike";
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 36)); // NOI18N
         jLabel4.setText("Bike Repairment");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 30, 300, 43);
+        jLabel4.setBounds(70, 30, 300, 43);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -163,7 +163,7 @@ static String fix = "Fix_Bike";
 
         jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(-10, -10, 440, 890);
+        jLabel5.setBounds(0, 0, 390, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
