@@ -59,17 +59,18 @@ public class Payment extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel1.setText("Payment Information");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(80, 30, 243, 25);
+        jLabel1.setBounds(90, 40, 243, 25);
 
         jLabel2.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel2.setText("Total Price is :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 170, 104, 17);
+        jLabel2.setBounds(20, 170, 95, 17);
 
         jLabel3.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel3.setText("SR");
@@ -162,7 +163,7 @@ public class Payment extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel5.setText("Card number :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 250, 104, 17);
+        jLabel5.setBounds(40, 250, 99, 17);
 
         jLabel6.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel6.setText("Name on Card :");
@@ -172,12 +173,12 @@ public class Payment extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel7.setText("Expires date : ");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(200, 250, 105, 17);
+        jLabel7.setBounds(200, 250, 97, 17);
 
         jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel8.setText("CVV Number :");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(200, 330, 103, 17);
+        jLabel8.setBounds(200, 330, 95, 17);
 
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
@@ -200,7 +201,7 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(290, 570, 120, 71);
+        jButton4.setBounds(290, 750, 130, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -211,7 +212,7 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 570, 170, 71);
+        jButton5.setBounds(120, 750, 170, 71);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Home");
@@ -222,7 +223,7 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 570, 120, 71);
+        jButton6.setBounds(0, 750, 120, 71);
 
         jTextField3.setEditable(false);
         jTextField3.setForeground(new java.awt.Color(51, 51, 51));
@@ -241,8 +242,9 @@ public class Payment extends javax.swing.JFrame {
         jButton2.setBounds(30, 490, 160, 52);
 
         jLabel9.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 400, 640);
+        jLabel9.setBounds(0, -10, 420, 920);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

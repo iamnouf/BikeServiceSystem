@@ -34,12 +34,10 @@ public class ValidationCode extends javax.swing.JFrame {
         Codedigit = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
@@ -83,40 +81,10 @@ public class ValidationCode extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(0, 0, 80, 90);
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Settings");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(270, 490, 120, 71);
-
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Orders");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(120, 490, 150, 71);
-
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Home");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(0, 490, 120, 71);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
+        jLabel2.setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 390, 560);
+        jLabel2.setBounds(0, 0, 420, 900);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -151,7 +119,7 @@ public class ValidationCode extends javax.swing.JFrame {
               
                 else
                 {
-                        JOptionPane.showMessageDialog(null, "Invalid Detalis !" );  
+                        JOptionPane.showMessageDialog(null, "Invalid Detalis Enter 6 Digits  !" );  
 
                 
                     Codedigit.setText(null);
@@ -164,24 +132,6 @@ public class ValidationCode extends javax.swing.JFrame {
         ForgetPassword back = new ForgetPassword ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        Settings back = new Settings ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        ViewOrder back = new ViewOrder ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        MainInterface back = new MainInterface ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,9 +172,6 @@ public class ValidationCode extends javax.swing.JFrame {
     private javax.swing.JTextField Codedigit;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

@@ -163,7 +163,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 590, 120, 71);
+        jButton3.setBounds(290, 750, 140, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -174,7 +174,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 590, 170, 71);
+        jButton5.setBounds(120, 750, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -185,7 +185,7 @@ public class Settings extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 590, 120, 71);
+        jButton4.setBounds(0, 750, 120, 71);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
@@ -208,8 +208,10 @@ public class Settings extends javax.swing.JFrame {
         jLabel10.setText("Address :");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(40, 350, 120, 17);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 0, 890);
+        jLabel9.setBounds(0, 0, 414, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

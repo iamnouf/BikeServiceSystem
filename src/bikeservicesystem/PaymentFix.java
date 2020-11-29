@@ -53,12 +53,13 @@ public class PaymentFix extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
         jLabel1.setText("Payment Information");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 30, 270, 25);
+        jLabel1.setBounds(110, 40, 270, 25);
 
         jLabel2.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         jLabel2.setText("Total Price is :");
@@ -198,7 +199,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(290, 570, 120, 80);
+        jButton4.setBounds(290, 730, 120, 80);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -209,7 +210,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 570, 170, 80);
+        jButton5.setBounds(120, 730, 170, 80);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Home");
@@ -220,7 +221,7 @@ public class PaymentFix extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 570, 120, 80);
+        jButton6.setBounds(0, 730, 120, 80);
 
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
@@ -233,8 +234,10 @@ public class PaymentFix extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3);
         jButton3.setBounds(0, 0, 80, 90);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 410, 650);
+        jLabel9.setBounds(0, -10, 410, 910);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

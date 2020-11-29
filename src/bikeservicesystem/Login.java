@@ -43,6 +43,7 @@ static     ArrayList<String> fileList = new ArrayList<>();
         jRadioButton1 = new javax.swing.JRadioButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -50,6 +51,7 @@ static     ArrayList<String> fileList = new ArrayList<>();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -77,15 +79,15 @@ static     ArrayList<String> fileList = new ArrayList<>();
         getContentPane().add(jButton1);
         jButton1.setBounds(130, 430, 116, 50);
 
-        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Forget your password ?");
         jLabel1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+                jLabel1AncestorMoved(evt);
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-                jLabel1AncestorMoved(evt);
             }
         });
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,7 +105,7 @@ static     ArrayList<String> fileList = new ArrayList<>();
             }
         });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(40, 350, 121, 23);
+        jRadioButton1.setBounds(40, 390, 121, 23);
 
         jPasswordField1.setForeground(new java.awt.Color(204, 204, 204));
         jPasswordField1.setText("***************");
@@ -121,7 +123,7 @@ static     ArrayList<String> fileList = new ArrayList<>();
             }
         });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(40, 310, 305, 35);
+        jPasswordField1.setBounds(40, 350, 305, 35);
 
         jFormattedTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jFormattedTextField1.setText("someone@example.com");
@@ -139,29 +141,36 @@ static     ArrayList<String> fileList = new ArrayList<>();
             }
         });
         getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(40, 250, 305, 35);
+        jFormattedTextField1.setBounds(40, 280, 305, 35);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 255));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(120, 510, 140, 12);
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel7.setText("LOGIN TO YOUR ACCOUNT");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(80, 130, 240, 22);
+        jLabel7.setBounds(80, 170, 240, 22);
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel6.setText("Password :");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 290, 120, 22);
+        jLabel6.setBounds(50, 330, 120, 22);
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel5.setText("Email :");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 230, 110, 22);
+        jLabel5.setBounds(50, 260, 110, 22);
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
         jLabel3.setText("LOGIN");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(150, 30, 131, 22);
+        jLabel3.setBounds(160, 40, 131, 22);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 2.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 400, 630);
+        jLabel4.setBounds(0, 0, 410, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -334,5 +343,6 @@ static     ArrayList<String> fileList = new ArrayList<>();
     private javax.swing.JLabel jLabel7;
     public static javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

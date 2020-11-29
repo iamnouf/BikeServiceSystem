@@ -81,6 +81,7 @@ public class ViewOrder extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jTextField23.setEditable(false);
@@ -140,7 +141,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(0, 580, 120, 71);
+        jButton6.setBounds(0, 750, 120, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -151,7 +152,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 580, 170, 71);
+        jButton5.setBounds(120, 750, 170, 71);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Settings");
@@ -162,7 +163,7 @@ public class ViewOrder extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 580, 120, 71);
+        jButton3.setBounds(290, 750, 140, 71);
 
         jButton7.setText("Cancel");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -366,8 +367,10 @@ public class ViewOrder extends javax.swing.JFrame {
         jLabel2.setText("My Orders");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(140, 30, 160, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 420, 650);
+        jLabel1.setBounds(0, -10, 420, 920);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

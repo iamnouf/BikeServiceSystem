@@ -56,6 +56,7 @@ static String fix = "Fix_Bike";
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().setLayout(null);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -90,10 +91,10 @@ static String fix = "Fix_Bike";
         getContentPane().add(jLabel3);
         jLabel3.setBounds(40, 380, 240, 22);
 
-        jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
         jLabel4.setText("Bike Repairment");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 30, 300, 43);
+        jLabel4.setBounds(100, 30, 300, 43);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -115,7 +116,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(270, 590, 120, 71);
+        jButton3.setBounds(270, 740, 150, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Home");
@@ -126,7 +127,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 590, 120, 71);
+        jButton4.setBounds(0, 740, 140, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Orders");
@@ -137,7 +138,7 @@ static String fix = "Fix_Bike";
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 590, 150, 71);
+        jButton5.setBounds(120, 740, 170, 71);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tight Brakes", "Air Filter", "Low engine Oil", "Chain Slack ", "Drum Brakes " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,8 +163,9 @@ static String fix = "Fix_Bike";
         Date.setBounds(40, 310, 200, 26);
 
         jLabel5.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 390, 660);
+        jLabel5.setBounds(0, 0, 420, 900);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
