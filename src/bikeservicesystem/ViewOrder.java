@@ -26,6 +26,8 @@ public class ViewOrder extends javax.swing.JFrame {
      */
     public ViewOrder() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -45,9 +47,6 @@ public class ViewOrder extends javax.swing.JFrame {
         jTextField26 = new javax.swing.JTextField();
         jTextField22 = new javax.swing.JTextField();
         jTextField25 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -68,15 +67,18 @@ public class ViewOrder extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jButton12 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -132,39 +134,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jTextField25);
         jTextField25.setBounds(220, 350, 90, 26);
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Home");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(0, 750, 120, 71);
-
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Orders");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(120, 750, 170, 71);
-
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Settings");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(290, 750, 140, 71);
-
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Cancel");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +164,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(330, 130, 90, 20);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +174,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(320, 230, 86, 29);
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,6 +184,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(320, 170, 86, 29);
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Cancel");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +194,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(320, 200, 86, 29);
 
+        jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setText("Cancel");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,6 +204,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton9);
         jButton9.setBounds(320, 350, 86, 29);
 
+        jButton10.setBackground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Cancel");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,6 +214,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton10);
         jButton10.setBounds(320, 320, 86, 29);
 
+        jButton11.setBackground(new java.awt.Color(255, 255, 255));
         jButton11.setText("Cancel");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,12 +278,6 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jTextField10);
         jTextField10.setBounds(110, 170, 90, 26);
 
-        jTextField11.setEditable(false);
-        jTextField11.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField11.setText("dd/MM/yy");
-        getContentPane().add(jTextField11);
-        jTextField11.setBounds(110, 200, 90, 26);
-
         jTextField12.setEditable(false);
         jTextField12.setForeground(new java.awt.Color(51, 51, 51));
         jTextField12.setText("dd/MM/yy");
@@ -344,6 +314,13 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jTextField17);
         jTextField17.setBounds(110, 380, 90, 26);
 
+        jFormattedTextField1.setEditable(false);
+        jFormattedTextField1.setForeground(new java.awt.Color(51, 51, 51));
+        jFormattedTextField1.setText("dd/MM/yy");
+        getContentPane().add(jFormattedTextField1);
+        jFormattedTextField1.setBounds(110, 200, 90, 26);
+
+        jButton12.setBackground(new java.awt.Color(255, 255, 255));
         jButton12.setText("Cancel");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,6 +330,7 @@ public class ViewOrder extends javax.swing.JFrame {
         getContentPane().add(jButton12);
         jButton12.setBounds(320, 380, 86, 29);
 
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton8.setText("UPDATE");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -362,6 +340,42 @@ public class ViewOrder extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8);
         jButton8.setBounds(140, 500, 120, 50);
+
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton3.setText("Settings");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(270, 780, 150, 71);
+
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton5.setText("Orders");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(120, 780, 170, 71);
+
+        jButton13.setBackground(new java.awt.Color(255, 255, 255));
+        jButton13.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton13.setText("Home");
+        jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton13);
+        jButton13.setBounds(0, 780, 140, 71);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel2.setText("My Orders");
@@ -374,24 +388,6 @@ public class ViewOrder extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Settings back = new Settings ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        ViewOrder back = new ViewOrder ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        MainInterface back = new MainInterface ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -409,7 +405,7 @@ public class ViewOrder extends javax.swing.JFrame {
         // TODO add your handling code here:
              if (jButton4.isEnabled()) {
             jTextField3.setText(null);
-            jTextField11.setText(null);
+            jFormattedTextField1.setText(null);
             jTextField20.setText("Cancelled");
 
             JOptionPane.showMessageDialog(null, "Your order has been cancelled !");
@@ -503,39 +499,32 @@ public class ViewOrder extends javax.swing.JFrame {
             while (read.hasNext()) {
                 String [] line = read.nextLine().split(" ");
                 fileList2.add(line[0]); 
+                                fileList2.add(line[23]); 
+
               
            
            
 
                 jTextField2.setText(fileList2.get(0));
-                jTextField10.setText(RentBike.Date.getText());
+                jTextField10.setText(fileList2.get(1));
                 jTextField19.setText("Process");
-                
-//                jTextField1.setText(fileList2.get(0));
-//                jTextField12.setText(RentBike.Date.getText());
-//                jTextField21.setText("Process");
-//                
-               
-               
-           
-                
+
+            }
+                                        read.close();
+
+                            while (sc.hasNext()) {
+
             //  String line;
                 String [] line2 = sc.nextLine().split(" ");
                 fileList.add(line2[0]);
+                fileList.add(line2[15]);
 
                jTextField3.setText(fileList.get(0));
-                jTextField11.setText(FixBike.Date.getText());
+                jFormattedTextField1.setText(fileList.get(1));
                 jTextField20.setText("Process");
-
-//                jTextField4.setText(fileList.get(0) );
-//                jTextField13.setText(FixBike.Date.getText());
-//                jTextField22.setText("Process");
-            
-
-               
+          
             }
-                            read.close();
-
+sc.close();
         } catch (IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -544,6 +533,24 @@ public class ViewOrder extends javax.swing.JFrame {
                
       
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Settings back = new Settings ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        ViewOrder back = new ViewOrder ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        MainInterface back = new MainInterface ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -585,14 +592,15 @@ public class ViewOrder extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    public static javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -601,7 +609,6 @@ public class ViewOrder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;

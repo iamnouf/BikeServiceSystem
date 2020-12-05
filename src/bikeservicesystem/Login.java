@@ -26,6 +26,8 @@ static     ArrayList<String> fileList = new ArrayList<>();
      */
     public Login() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -55,7 +57,7 @@ static     ArrayList<String> fileList = new ArrayList<>();
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
         jButton3.setText("<");
@@ -177,13 +179,27 @@ static     ArrayList<String> fileList = new ArrayList<>();
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       
+        try {
+            Scanner read = new Scanner(new File("userData.txt"));
+            //  String line;
+            while (read.hasNext()) {
+                String [] line = read.nextLine().split(" ");
+                fileList.add(line[2]); 
+                fileList.add(line[3]);
+
+               
+            }
+                            read.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
            
        String Email = jFormattedTextField1.getText();
         String Password = jPasswordField1.getText();
             
             
-       if (EmailsList().contains(Email) && PasswordList().contains(Password)&&!Email.isEmpty()&&!Password.isEmpty()) {
+       if (fileList.get(0).contains(Email) && fileList.get(1).contains(Password)&&!Email.isEmpty()&&!Password.isEmpty()) {
            
                    
                    MainInterface next = new MainInterface ();
@@ -194,40 +210,8 @@ static     ArrayList<String> fileList = new ArrayList<>();
             
                 }
     }//GEN-LAST:event_jButton1ActionPerformed
-    public ArrayList<String> EmailsList (){
-        try {
-            Scanner read = new Scanner(new File("userData.txt"));
-            //  String line;
-            while (read.hasNext()) {
-                String [] line = read.nextLine().split(" ");
-                fileList.add(line[0]); 
-                
-               
-            }
-                            read.close();
 
-        } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return fileList;
-    }
-    
-       public ArrayList<String> PasswordList (){
-        try {
-            Scanner read = new Scanner(new File("userData.txt"));
-            //  String line;
-            while (read.hasNext()) {
-                String [] line = read.nextLine().split(" ");
-                fileList.add(line[3]);
-               
-            }
-                            read.close();
-
-        } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return fileList;
-    }
+   
        
        
      

@@ -26,6 +26,8 @@ public class Payment extends javax.swing.JFrame {
      */
     public Payment() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -51,10 +53,10 @@ public class Payment extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
@@ -180,6 +182,7 @@ public class Payment extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(200, 330, 95, 17);
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
         jButton3.setText("<");
@@ -192,18 +195,25 @@ public class Payment extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(0, 0, 80, 90);
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Settings");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jTextField3.setEditable(false);
+        jTextField3.setForeground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(130, 160, 61, 40);
+
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton7.setText("Settings");
+        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(290, 750, 130, 71);
+        getContentPane().add(jButton7);
+        jButton7.setBounds(270, 780, 150, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton5.setText("Orders");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -212,23 +222,19 @@ public class Payment extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 750, 170, 71);
+        jButton5.setBounds(120, 780, 170, 71);
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Home");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jButton4.setText("Home");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(0, 750, 120, 71);
-
-        jTextField3.setEditable(false);
-        jTextField3.setForeground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(130, 160, 61, 40);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(0, 780, 140, 71);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
@@ -337,24 +343,6 @@ public class Payment extends javax.swing.JFrame {
         back.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        Settings back = new Settings ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        ViewOrder back = new ViewOrder ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        MainInterface back = new MainInterface ();
-        back.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
             // TODO add your handling code here:
@@ -394,6 +382,24 @@ public class Payment extends javax.swing.JFrame {
             }
        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        Settings back = new Settings ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        ViewOrder back = new ViewOrder ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        MainInterface back = new MainInterface ();
+        back.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,7 +443,7 @@ public class Payment extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;

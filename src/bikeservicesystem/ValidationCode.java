@@ -19,6 +19,8 @@ public class ValidationCode extends javax.swing.JFrame {
      */
     public ValidationCode() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -69,6 +71,7 @@ public class ValidationCode extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(140, 390, 107, 52);
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
         jButton3.setText("<");
@@ -82,7 +85,6 @@ public class ValidationCode extends javax.swing.JFrame {
         jButton3.setBounds(0, 0, 80, 90);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(414, 896));
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 420, 900);
 
@@ -90,7 +92,7 @@ public class ValidationCode extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CodedigitFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CodedigitFocusGained
-   if(Codedigit.getText().equals("6 digit"))
+   if(Codedigit.getText().equals("6 digit "))
         {
             Codedigit.setText("");
             Codedigit.setForeground(new Color(0,0,0));
@@ -101,7 +103,7 @@ public class ValidationCode extends javax.swing.JFrame {
         // TODO add your handling code here
      if(Codedigit.getText().equals(""))
         {
-            Codedigit.setText("6 digit");
+            Codedigit.setText("6 digit ");
             Codedigit.setForeground(new Color(0,0,0));
         }
     }//GEN-LAST:event_CodedigitFocusLost

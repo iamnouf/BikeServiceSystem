@@ -16,6 +16,8 @@ public class Thanku extends javax.swing.JFrame {
      */
     public Thanku() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -35,10 +37,10 @@ public class Thanku extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         jButton7.setBackground(new java.awt.Color(102, 204, 255));
@@ -67,6 +69,7 @@ public class Thanku extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(50, 490, 340, 50);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("Done");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +85,12 @@ public class Thanku extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(100, 460, 310, 40);
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/checked.png"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(80, 60, 280, 420);
+
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton3.setText("Settings");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -91,9 +99,10 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(270, 730, 160, 80);
+        jButton3.setBounds(270, 780, 150, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton5.setText("Orders");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -102,9 +111,10 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 730, 150, 80);
+        jButton5.setBounds(120, 780, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton4.setText("Home");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -113,11 +123,7 @@ public class Thanku extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 730, 120, 80);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/checked.png"))); // NOI18N
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(80, 60, 280, 420);
+        jButton4.setBounds(0, 780, 140, 71);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background/iPhone XR, XS Max, 11 – 13.png"))); // NOI18N
         getContentPane().add(jLabel2);

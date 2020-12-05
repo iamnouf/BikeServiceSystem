@@ -19,6 +19,8 @@ public class NewPassword extends javax.swing.JFrame {
      */
     public NewPassword() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -103,6 +105,7 @@ public class NewPassword extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(40, 250, 150, 35);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton1.setText("Change");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +116,7 @@ public class NewPassword extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(210, 490, 170, 40);
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +127,7 @@ public class NewPassword extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(20, 490, 170, 40);
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton4.setForeground(new java.awt.Color(204, 204, 204));
         jButton4.setText("<");

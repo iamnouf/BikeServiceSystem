@@ -5,7 +5,14 @@
  */
 package bikeservicesystem;
 
+import static bikeservicesystem.Login.fileList;
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,12 +20,15 @@ import javax.swing.JOptionPane;
  * @author fatima
  */
 public class ForgetPassword extends javax.swing.JFrame {
+static     ArrayList<String> fileList = new ArrayList<>();
 
     /**
      * Creates new form ForgetsPassword
      */
     public ForgetPassword() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -63,6 +73,7 @@ public class ForgetPassword extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(100, 300, 270, 22);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton1.setText("Reset my Password");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +82,7 @@ public class ForgetPassword extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 440, 192, 37);
+        jButton1.setBounds(100, 440, 200, 50);
 
         jTextField1.setForeground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("someone@example.com");
@@ -83,10 +94,15 @@ public class ForgetPassword extends javax.swing.JFrame {
                 jTextField1FocusLost(evt);
             }
         });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField1);
         jTextField1.setBounds(80, 360, 239, 40);
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
         jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton6.setForeground(new java.awt.Color(204, 204, 204));
         jButton6.setText("<");
@@ -132,22 +148,40 @@ public class ForgetPassword extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+                try {
+            Scanner read = new Scanner(new File("userData.txt"));
+            //  String line;
+            while (read.hasNext()) {
+                String [] line = read.nextLine().split(" ");
+                fileList.add(line[2]); 
+
+               
+            }
+                            read.close();
+
+        } catch (IOException ex) {
+        }
+           
         String Email = jTextField1.getText();
         String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(Email);
 
-        if (m.matches() && !Email.isEmpty()) {
+        if (fileList.get(0).contains(Email)&&m.matches() && !Email.isEmpty()) {
             ValidationCode info = new ValidationCode();
             info.setVisible(true);
         } else {
-           JOptionPane.showMessageDialog(null, "Invalid Detalis !" );  
+           JOptionPane.showMessageDialog(null, "Invalid Detalis Email Doesn't Exist !" );  
 
             jTextField1.setText(null);
 
         }        // TODO add your handling code here:
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

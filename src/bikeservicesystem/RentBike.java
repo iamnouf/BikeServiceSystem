@@ -28,6 +28,8 @@ static String rent = "Rent_Bike";
      */
     public RentBike() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -90,6 +92,7 @@ static String rent = "Rent_Bike";
         getContentPane().add(jLabel4);
         jLabel4.setBounds(50, 320, 80, 17);
 
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Street Bike", "Sport Bike", "Naked Bike", "Cruiser Bike", "Commuter Bike" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +104,7 @@ static String rent = "Rent_Bike";
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(43, 240, 50, 26);
 
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours", "8 hours", "9 hours", "10 hours", "11 hours", "12 hours" }));
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(40, 290, 150, 27);
@@ -123,6 +127,7 @@ static String rent = "Rent_Bike";
         getContentPane().add(Date);
         Date.setBounds(40, 340, 150, 26);
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton2.setForeground(new java.awt.Color(204, 204, 204));
         jButton2.setText("<");
@@ -136,6 +141,7 @@ static String rent = "Rent_Bike";
         jButton2.setBounds(0, 0, 80, 90);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton3.setText("Settings");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -144,9 +150,10 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(290, 740, 130, 71);
+        jButton3.setBounds(270, 780, 150, 71);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton5.setText("Orders");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -155,9 +162,10 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(120, 740, 170, 71);
+        jButton5.setBounds(120, 780, 170, 71);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jButton4.setText("Home");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +174,7 @@ static String rent = "Rent_Bike";
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(0, 740, 120, 71);
+        jButton4.setBounds(0, 780, 140, 71);
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel6.setText("Rent a Bike");
@@ -294,6 +302,10 @@ static String rent = "Rent_Bike";
         back.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DateActionPerformed
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Settings back = new Settings ();
@@ -311,10 +323,6 @@ static String rent = "Rent_Bike";
         MainInterface back = new MainInterface ();
         back.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void DateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DateActionPerformed
 
     /**
      * @param args the command line arguments

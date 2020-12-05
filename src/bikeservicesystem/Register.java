@@ -9,6 +9,7 @@ import java.awt.Color;
 import bikeservicesystem.Welcome;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
@@ -25,13 +26,15 @@ import javax.swing.JTextField;
  * @author NEW
  */
 public class Register extends javax.swing.JFrame {
-    static ArrayList<String> fileList = new ArrayList<>();
+    
 
     /**
      * Creates new form Register
      */
     public Register() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -181,6 +184,7 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(PhoneNumber);
         PhoneNumber.setBounds(40, 420, 240, 26);
 
+        Language.setBackground(new java.awt.Color(255, 255, 255));
         Language.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Engilsh", "Arabic" }));
         getContentPane().add(Language);
         Language.setBounds(40, 610, 180, 27);
@@ -227,6 +231,7 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(jLabel16);
         jLabel16.setBounds(40, 380, 370, 10);
 
+        RegNext.setBackground(new java.awt.Color(255, 255, 255));
         RegNext.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         RegNext.setText("Register");
         RegNext.setPreferredSize(new java.awt.Dimension(414, 896));
@@ -238,6 +243,7 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(RegNext);
         RegNext.setBounds(260, 650, 108, 49);
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
         jButton1.setForeground(new java.awt.Color(204, 204, 204));
         jButton1.setText("<");
@@ -248,7 +254,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(10, -10, 80, 90);
+        jButton1.setBounds(0, 0, 80, 90);
 
         addressText.setForeground(new java.awt.Color(204, 204, 204));
         addressText.setText("Building number , street name ...etc");
@@ -406,7 +412,7 @@ public class Register extends javax.swing.JFrame {
         java.util.regex.Pattern w = java.util.regex.Pattern.compile(edPattern);
         java.util.regex.Matcher dates = w.matcher(Date1);
         
-            
+   
             /*
             - The password must be at least 8 characters long.
             - The password must contain at least:
@@ -425,33 +431,33 @@ public class Register extends javax.swing.JFrame {
             java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
             java.util.regex.Matcher email = p.matcher(Email);
             
-            if (lastName.matches(LowUpperCase) && dates.matches() &&email.matches() && Password.matches(upperCase) && Password.matches(numbers) && Password.matches(specialChars) && !Password.matches(space) && Password.length() > 8 && firstName.matches(LowUpperCase)
+            if (lastName.matches(LowUpperCase)&& dates.matches() &&email.matches() && Password.matches(upperCase) && Password.matches(numbers) && Password.matches(specialChars) && !Password.matches(space) && firstName.matches(LowUpperCase)
                     && Address.matches(LowUpperCase) && Address.matches(numbers) && phoneNum.matches("[0-9]{10}")) {
                 
                 MainInterface next = new MainInterface ();
                 next.setVisible(true);
                 
-            }
+
+                
             
-            else if(EmailsList().contains(Email)){
-                JOptionPane.showMessageDialog(null, "Email Already Exists" );
-                emText.setText(null);
+            } else if(!Password.matches(upperCase) && !Password.matches(numbers) && !Password.matches(specialChars) && !Password.matches(space) && Password.length() != 8) {
+                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !"
+                        + "- The password must be at least 8 characters long.\n" +
+"            - The password must contain at least:\n" +
+"            - one alpha character [a-zA-Z]\n" +
+"            - one numeric character [0-9]\n" +
+"            - one character that is not alpha or numeric, such as ! # @ $ % ^ & * ( ) - _ = + [ ] ; : ' \" , < . > / ?\n" +
+"            - The password must not contain spaces" );
+                         password.setText(null);
+
+               
+            
                 
-                
-            }else if (Email.isEmpty() && Password.isEmpty() && firstName.isEmpty() && lastName.isEmpty() && Address.isEmpty() && phoneNum.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !" );
-                
-            } else  {
-                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !" );
-                emText.setText(null);
-                Fname.setText(null);
-                Lname.setText(null);
-                password.setText(null);
-                addressText.setText(null);
-                PhoneNumber.setText(null);
-                Date.setText(null);
-                
+            }else {
+                                JOptionPane.showMessageDialog(null, "Invalid Register Detalis !");
+
             }
+             
             JTextField emText = new JTextField();
             emText.setText(Email);
             
@@ -502,30 +508,17 @@ public class Register extends javax.swing.JFrame {
             } catch (IOException ex) {
                 
             }
+                
+            }
+          
             
-        } catch (ParseException ex) {
+         catch (ParseException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
            
-           }
+        }
         
     }//GEN-LAST:event_RegNextActionPerformed
-public ArrayList<String> EmailsList (){
-        try {
-            Scanner read = new Scanner(new File("userData.txt"));
-            //  String line;
-            while (read.hasNext()) {
-                String [] line = read.nextLine().split(" ");
-                fileList.add(line[0]); 
-                
-               
-            }
-                            read.close();
 
-        } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return fileList;
-    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Welcome back = new Welcome ();
